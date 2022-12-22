@@ -1,0 +1,12 @@
+modLoader = "javafml"
+loaderVersion = "[40,)"
+license = "GNU GPLv3.0"
+[[mods]]
+modId = "candycraft"
+version = "${file.jarVersion}"
+displayName = "CandyCraft"
+logoFile = "logo.png"
+authors = "Valentin4311, Bread_NiceCat"
+credits = ""
+description = '''
+'''
