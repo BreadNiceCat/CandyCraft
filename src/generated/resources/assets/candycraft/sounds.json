@@ -1,0 +1,22 @@
+{
+  "cd-1": {
+    "sounds": [
+      "candycraft:records/cd-1"
+    ]
+  },
+  "cd-4": {
+    "sounds": [
+      "candycraft:records/cd-4"
+    ]
+  },
+  "cd-2": {
+    "sounds": [
+      "candycraft:records/cd-2"
+    ]
+  },
+  "cd-3": {
+    "sounds": [
+      "candycraft:records/cd-3"
+    ]
+  }
+}

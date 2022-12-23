@@ -15,7 +15,7 @@ import java.util.function.BiConsumer;
 public class SimpleItemModelProvider extends ItemModelProvider {
 
 	public static final ResourceLocation GENERATED = new ResourceLocation("item/generated");
-	public static final BiConsumer<SimpleItemModelProvider, String> DEFAULT_ITEM_GENERATOR = (provider, reg) -> provider.withExistingParent(reg, GENERATED).texture("layer0", provider.modLoc("item/" + reg));
+	public static final BiConsumer<SimpleItemModelProvider, String> DEFAULT_ITEM_GENERATOR = (provider, reg) -> provider.withExistingParent(reg, GENERATED).texture("layer0", provider.modLoc("items/" + reg));
 	private final DatagenHelper datagenHelper;
 
 	public SimpleItemModelProvider(DatagenHelper datagenHelper, DataGenerator generator, ExistingFileHelper existingFileHelper) {

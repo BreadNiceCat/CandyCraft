@@ -1,8 +1,5 @@
 package cn.breadnicecat.codeovencore;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import java.util.HashMap;
 
 /**
@@ -12,7 +9,6 @@ import java.util.HashMap;
 //@Mod(CodeOvenCore.MODID)
 public class CodeOvenCore {
 	public static final String MODID = "codeovencore";
-	public static final Logger LOGGER = LogManager.getLogger(MODID);
 	private static final HashMap<String, CodeOvenCoreInstance> INSTANCES = new HashMap<>();
 
 	public static CodeOvenCoreInstance getInstance(String modid) {

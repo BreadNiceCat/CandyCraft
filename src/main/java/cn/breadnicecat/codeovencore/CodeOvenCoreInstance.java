@@ -2,6 +2,7 @@ package cn.breadnicecat.codeovencore;
 
 import cn.breadnicecat.codeovencore.helper.DatagenHelper;
 import cn.breadnicecat.codeovencore.helper.ItemRegisterHelper;
+import cn.breadnicecat.codeovencore.helper.SoundHelper;
 import net.minecraft.resources.ResourceLocation;
 
 /**
@@ -12,6 +13,7 @@ public class CodeOvenCoreInstance {
 	public final String modid;
 	private ItemRegisterHelper itemRegisterHelper;
 	private DatagenHelper datagenHelper;
+	private SoundHelper soundHelper;
 
 	protected CodeOvenCoreInstance(String modid) {
 		this.modid = modid;
@@ -26,6 +28,10 @@ public class CodeOvenCoreInstance {
 	 */
 	public DatagenHelper getDatagenHelper() {
 		return datagenHelper == null ? (datagenHelper = new DatagenHelper(this)) : datagenHelper;
+	}
+
+	public SoundHelper getSoundHelper() {
+		return soundHelper == null ? (soundHelper = new SoundHelper(this)) : soundHelper;
 	}
 
 	/**

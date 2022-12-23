@@ -21,10 +21,10 @@ apply plugin: 'net.minecraftforge.gradle'
 //apply plugin: 'org.spongepowered.mixin'
 apply plugin: 'org.parchmentmc.librarian.forgegradle'
 
-
-version = '3.0.0'
+version = '1.0.0'
 group = 'indi.bread_nicecat.candycraft'
-archivesBaseName = 'candycraft'
+boolean isSnapshot = true
+archivesBaseName = (isSnapshot ? (new Date().format("yyyyMMdd") + "-snapshot-") : "") + 'Candycraft'
 
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)

@@ -6,7 +6,7 @@ import net.minecraft.world.item.Item;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
-import org.jetbrains.annotations.Nullable;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.function.BiConsumer;
 import java.util.function.Supplier;
@@ -16,13 +16,13 @@ import java.util.function.Supplier;
  * @date 2022/12/21 14:45
  */
 public class ItemRegisterHelper {
-	public final DeferredRegister<Item> REGISTER;
+	public final DeferredRegister<Item> register;
 	private final CodeOvenCoreInstance instance;
 
 	public ItemRegisterHelper(CodeOvenCoreInstance instance) {
 		this.instance = instance;
-		REGISTER = DeferredRegister.create(Item.class, instance.modid);
-		REGISTER.register(FMLJavaModLoadingContext.get().getModEventBus());
+		register = DeferredRegister.create(Item.class, instance.modid);
+		register.register(FMLJavaModLoadingContext.get().getModEventBus());
 	}
 
 	public static String getEnLangByName(String name) {
@@ -34,24 +34,30 @@ public class ItemRegisterHelper {
 		return sb.substring(0, sb.length() - 1);
 	}
 
-	public <I extends Item> RegistryObject<I> registerItem(String name, String enLocName, Supplier<I> item, @Nullable BiConsumer<SimpleItemModelProvider, String> modelGenerator) {
-		RegistryObject<I> object = REGISTER.register(name, item);
+	/**
+	 * @param name           物品名
+	 * @param enLocName      经本地化过的en_us名 NOTE:runDataModeOnly
+	 * @param item           Item
+	 * @param modelGenerator 模型生成器 NOTE:runDataModeOnly
+	 */
+	public <I extends Item> RegistryObject<I> registerItem(@NotNull String name, @NotNull String enLocName, @NotNull Supplier<I> item, @NotNull BiConsumer<SimpleItemModelProvider, String> modelGenerator) {
+		RegistryObject<I> object = register.register(name, item);
 		DatagenHelper datagenHelper = instance.getDatagenHelper();
 		datagenHelper.langEn.put("item." + instance.modid + "." + name, enLocName);
-		if (modelGenerator != null) datagenHelper.itemModel.put(name, modelGenerator);
+		datagenHelper.itemModel.put(name, modelGenerator);
 		return object;
 
 	}
 
-	public <I extends Item> RegistryObject<I> registerItem(String name, Supplier<I> item, BiConsumer<SimpleItemModelProvider, String> modelGenerator) {
+	public <I extends Item> RegistryObject<I> registerItem(@NotNull String name, @NotNull Supplier<I> item, @NotNull BiConsumer<SimpleItemModelProvider, String> modelGenerator) {
 		return registerItem(name, getEnLangByName(name), item, modelGenerator);
 	}
 
-	public RegistryObject<Item> registerSimpleItem(String name, Item.Properties prop) {
+	public RegistryObject<Item> registerSimpleItem(@NotNull String name, @NotNull Item.Properties prop) {
 		return registerItem(name, () -> new Item(prop), SimpleItemModelProvider.DEFAULT_ITEM_GENERATOR);
 	}
 
-	public RegistryObject<Item> registerSimpleItem(String name, String enLocName, Item.Properties prop) {
+	public RegistryObject<Item> registerSimpleItem(@NotNull String name, @NotNull String enLocName, @NotNull Item.Properties prop) {
 		return registerItem(name, enLocName, () -> new Item(prop), SimpleItemModelProvider.DEFAULT_ITEM_GENERATOR);
 	}
 
