@@ -1,5 +1,6 @@
 package cn.breadnicecat.codeovencore;
 
+import cn.breadnicecat.codeovencore.helper.BlockRegisterHelper;
 import cn.breadnicecat.codeovencore.helper.DatagenHelper;
 import cn.breadnicecat.codeovencore.helper.ItemRegisterHelper;
 import cn.breadnicecat.codeovencore.helper.SoundHelper;
@@ -9,18 +10,23 @@ import net.minecraft.resources.ResourceLocation;
  * @author <a href="https://gitee.com/Bread_NiceCat">Bread_NiceCat</a>
  * @date 2022/12/21 14:50
  */
-public class CodeOvenCoreInstance {
+public final class CodeOvenCoreInstance {
 	public final String modid;
 	private ItemRegisterHelper itemRegisterHelper;
 	private DatagenHelper datagenHelper;
 	private SoundHelper soundHelper;
+	private BlockRegisterHelper blockRegisterHelper;
 
-	protected CodeOvenCoreInstance(String modid) {
+	CodeOvenCoreInstance(String modid) {
 		this.modid = modid;
 	}
 
 	public ItemRegisterHelper getItemRegisterHelper() {
 		return itemRegisterHelper == null ? (itemRegisterHelper = new ItemRegisterHelper(this)) : itemRegisterHelper;
+	}
+
+	public BlockRegisterHelper getBlockRegisterHelper() {
+		return blockRegisterHelper == null ? (blockRegisterHelper = new BlockRegisterHelper(this)) : blockRegisterHelper;
 	}
 
 	/**

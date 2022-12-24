@@ -1,9 +1,7 @@
 package cn.breadnicecat.codeovencore.helper;
 
 import cn.breadnicecat.codeovencore.CodeOvenCoreInstance;
-import cn.breadnicecat.codeovencore.datagen.EnLanguageProvider;
-import cn.breadnicecat.codeovencore.datagen.SimpleItemModelProvider;
-import cn.breadnicecat.codeovencore.datagen.SoundProvider;
+import cn.breadnicecat.codeovencore.datagen.*;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -20,15 +18,16 @@ import java.util.function.Supplier;
  * @author <a href="https://gitee.com/Bread_NiceCat">Bread_NiceCat</a>
  * @date 2022/12/22 13:11
  */
-public class DatagenHelper {
+public class DatagenHelper extends Helper {
 
-	public final String modid;
 	public HashMap<String, String> langEn = new HashMap<>();
 	public HashMap<Supplier<SoundEvent>, SoundDefinition> sounds = new HashMap<>();
-	public HashMap<String, BiConsumer<SimpleItemModelProvider, String>> itemModel = new HashMap<>();
+	public HashMap<String, BiConsumer<CocItemModelProvider, String>> itemModel = new HashMap<>();
+	public HashMap<String, BiConsumer<CocBlockModelProvider, String>> blockModel = new HashMap<>();
+	public HashMap<String, BiConsumer<CocBlockStateProvider, String>> blockState = new HashMap<>();
 
 	public DatagenHelper(CodeOvenCoreInstance instance) {
-		modid = instance.modid;
+		super(instance);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 
@@ -39,8 +38,10 @@ public class DatagenHelper {
 		if (event.includeClient()) {
 			//block/item models, blockstates, language files...
 			generator.addProvider(new EnLanguageProvider(this, generator));
-			generator.addProvider(new SimpleItemModelProvider(this, generator, efHelper));
-			generator.addProvider(new SoundProvider(this, generator, efHelper));
+			generator.addProvider(new CocItemModelProvider(this, generator, efHelper));
+			generator.addProvider(new CocSoundProvider(this, generator, efHelper));
+			generator.addProvider(new CocBlockModelProvider(this, generator, efHelper));
+			generator.addProvider(new CocBlockStateProvider(this, generator, efHelper));
 		}
 		if (event.includeServer()) {
 			//recipes,advancements,tags...

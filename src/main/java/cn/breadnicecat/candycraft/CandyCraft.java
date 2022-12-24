@@ -1,7 +1,8 @@
 package cn.breadnicecat.candycraft;
 
+import cn.breadnicecat.candycraft.block.BlockManager;
 import cn.breadnicecat.candycraft.item.ItemManager;
-import cn.breadnicecat.candycraft.tab.CCTab;
+import cn.breadnicecat.candycraft.misc.CCTab;
 import cn.breadnicecat.codeovencore.CodeOvenCore;
 import cn.breadnicecat.codeovencore.CodeOvenCoreInstance;
 import net.minecraft.world.item.CreativeModeTab;
@@ -19,5 +20,6 @@ public class CandyCraft {
 
 	public CandyCraft() {
 		ItemManager.init();
+		BlockManager.init();
 	}
 }
