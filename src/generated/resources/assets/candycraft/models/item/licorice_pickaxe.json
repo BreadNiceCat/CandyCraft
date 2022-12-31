@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "candycraft:items/licorice_pickaxe"
+    "layer0": "candycraft:item/licorice_pickaxe"
   }
 }

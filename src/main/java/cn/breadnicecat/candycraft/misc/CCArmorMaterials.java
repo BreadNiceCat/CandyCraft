@@ -1,7 +1,7 @@
 package cn.breadnicecat.candycraft.misc;
 
 import cn.breadnicecat.candycraft.item.ItemManager;
-import cn.breadnicecat.codeovencore.item.ArmorMaterialImpl;
+import cn.breadnicecat.codeovencore.misc.ArmorMaterialImpl;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.crafting.Ingredient;

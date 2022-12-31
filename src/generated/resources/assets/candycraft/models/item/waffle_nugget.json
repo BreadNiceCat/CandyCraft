@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "candycraft:items/waffle_nugget"
+    "layer0": "candycraft:item/waffle_nugget"
   }
 }

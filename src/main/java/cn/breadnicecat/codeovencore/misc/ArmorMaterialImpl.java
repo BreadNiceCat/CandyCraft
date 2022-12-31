@@ -1,4 +1,4 @@
-package cn.breadnicecat.codeovencore.item;
+package cn.breadnicecat.codeovencore.misc;
 
 import cn.breadnicecat.candycraft.CandyCraft;
 import net.minecraft.sounds.SoundEvent;

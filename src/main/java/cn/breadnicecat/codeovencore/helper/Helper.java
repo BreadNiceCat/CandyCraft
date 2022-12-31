@@ -12,7 +12,7 @@ import org.jetbrains.annotations.NotNull;
  */
 public abstract class Helper {
 
-	protected final CodeOvenCoreInstance instance;
+	public final CodeOvenCoreInstance instance;
 	public final String modid;
 
 	public Helper(@NotNull CodeOvenCoreInstance instance) {

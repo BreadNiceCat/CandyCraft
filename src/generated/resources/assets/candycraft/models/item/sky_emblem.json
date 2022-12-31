@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "candycraft:items/sky_emblem"
+    "layer0": "candycraft:item/sky_emblem"
   }
 }

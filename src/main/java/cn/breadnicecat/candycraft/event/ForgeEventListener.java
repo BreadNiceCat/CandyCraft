@@ -3,7 +3,6 @@ package cn.breadnicecat.candycraft.event;
 import cn.breadnicecat.candycraft.item.ItemManager;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraftforge.event.entity.living.LivingFallEvent;
-import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
@@ -18,8 +17,5 @@ public class ForgeEventListener {
 		if (event.getEntityLiving().getItemBySlot(EquipmentSlot.FEET).is(ItemManager.trampojelly_boots.get())) {
 			event.setCanceled(true);
 		}
-	}
-
-	public static void onPlayerIn(PlayerEvent.PlayerLoggedInEvent event) {
 	}
 }

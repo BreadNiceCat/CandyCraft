@@ -15,7 +15,6 @@ import java.util.function.BiConsumer;
 public class CocItemModelProvider extends ItemModelProvider {
 
 	public static final ResourceLocation GENERATED = new ResourceLocation("item/generated");
-	public static final BiConsumer<CocItemModelProvider, String> DEFAULT_ITEM_GENERATOR = (provider, name) -> provider.withExistingParent(name, GENERATED).texture("layer0", provider.modLoc("items/" + name));
 	private final DatagenHelper datagenHelper;
 
 	public CocItemModelProvider(DatagenHelper datagenHelper, DataGenerator generator, ExistingFileHelper existingFileHelper) {
@@ -26,5 +25,14 @@ public class CocItemModelProvider extends ItemModelProvider {
 	@Override
 	protected void registerModels() {
 		datagenHelper.itemModel.forEach((name, consumer) -> consumer.accept(this, name));
+	}
+
+	public interface ItemModelGenerator extends BiConsumer<CocItemModelProvider, String> {
+		ItemModelGenerator SIMPLE_ITEM_GENERATOR = (provider, name) -> {
+			provider.withExistingParent(name, GENERATED).texture("layer0", provider.modLoc(ITEM_FOLDER + "/" + name));
+		};
+		ItemModelGenerator SIMPLE_BLOCK_ITEM_GENERATOR = (provider, name) -> {
+			provider.withExistingParent(name, provider.modLoc(BLOCK_FOLDER + "/" + name));
+		};
 	}
 }

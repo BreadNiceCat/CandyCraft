@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "candycraft:items/jawbreaker"
+    "layer0": "candycraft:item/jawbreaker"
   }
 }

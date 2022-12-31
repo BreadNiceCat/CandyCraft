@@ -19,7 +19,7 @@ public class CandyCraft {
 	public static final CreativeModeTab TAB = new CCTab();
 
 	public CandyCraft() {
-		ItemManager.init();
 		BlockManager.init();
+		ItemManager.init();
 	}
 }

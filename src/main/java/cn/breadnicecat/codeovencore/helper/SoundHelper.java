@@ -21,7 +21,6 @@ public class SoundHelper extends Helper {
 	public SoundHelper(CodeOvenCoreInstance instance) {
 		super(instance);
 		register = getRegister(SoundEvent.class);
-
 	}
 
 	/**

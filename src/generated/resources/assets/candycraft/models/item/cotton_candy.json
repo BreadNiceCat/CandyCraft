@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "candycraft:items/cotton_candy"
+    "layer0": "candycraft:item/cotton_candy"
   }
 }

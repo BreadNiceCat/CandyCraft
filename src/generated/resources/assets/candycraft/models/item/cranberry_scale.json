@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "candycraft:items/cranberry_scale"
+    "layer0": "candycraft:item/cranberry_scale"
   }
 }

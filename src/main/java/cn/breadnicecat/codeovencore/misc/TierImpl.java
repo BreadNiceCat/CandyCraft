@@ -1,10 +1,11 @@
-package cn.breadnicecat.codeovencore.item;
+package cn.breadnicecat.codeovencore.misc;
 
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.util.Lazy;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import javax.annotation.Nonnull;
@@ -20,9 +21,9 @@ public class TierImpl implements Tier {
 	private final float speed;
 	private final float attackDamageBonus;
 	private final int enchantmentValue;
-	@Nonnull
+	@Nullable
 	private final TagKey<Block> tag;
-	@Nonnull
+	@NotNull
 	private final Lazy<Ingredient> repairIngredient;
 
 	/**
@@ -35,7 +36,7 @@ public class TierImpl implements Tier {
 	 * @param repairIngredient  修复材料
 	 */
 	public TierImpl(int level, int uses, float speed, float attackDamageBonus, int enchantmentValue,
-	                @Nullable TagKey<Block> tag, @Nonnull Supplier<Ingredient> repairIngredient) {
+	                @Nullable TagKey<Block> tag, @NotNull Supplier<Ingredient> repairIngredient) {
 		this.level = level;
 		this.uses = uses;
 		this.speed = speed;
@@ -61,6 +62,7 @@ public class TierImpl implements Tier {
 	}
 
 	@Override
+	@Deprecated
 	public int getLevel() {
 		return this.level;
 	}
@@ -71,6 +73,7 @@ public class TierImpl implements Tier {
 	}
 
 	@Nullable
+	@Override
 	public TagKey<Block> getTag() {
 		return this.tag;
 	}

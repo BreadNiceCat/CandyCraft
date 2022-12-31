@@ -1,7 +1,7 @@
 package cn.breadnicecat.candycraft.misc;
 
 import cn.breadnicecat.candycraft.item.ItemManager;
-import cn.breadnicecat.codeovencore.item.TierImpl;
+import cn.breadnicecat.codeovencore.misc.TierImpl;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.Tiers;
 import net.minecraft.world.item.crafting.Ingredient;

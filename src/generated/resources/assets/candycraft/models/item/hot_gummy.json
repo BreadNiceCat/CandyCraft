@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "candycraft:items/hot_gummy"
+    "layer0": "candycraft:item/hot_gummy"
   }
 }

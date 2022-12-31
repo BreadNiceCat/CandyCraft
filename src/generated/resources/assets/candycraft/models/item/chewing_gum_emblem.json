@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "candycraft:items/chewing_gum_emblem"
+    "layer0": "candycraft:item/chewing_gum_emblem"
   }
 }

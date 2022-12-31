@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "candycraft:items/trampojelly_boots"
+    "layer0": "candycraft:item/trampojelly_boots"
   }
 }

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "candycraft:items/jelly_boss_key"
+    "layer0": "candycraft:item/jelly_boss_key"
   }
 }
