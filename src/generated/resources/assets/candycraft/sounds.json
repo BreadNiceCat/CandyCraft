@@ -1,22 +1,4 @@
 {
-  "cd-4": {
-    "replace": true,
-    "sounds": [
-      {
-        "name": "candycraft:records/cd-4",
-        "stream": true
-      }
-    ]
-  },
-  "cd-2": {
-    "replace": true,
-    "sounds": [
-      {
-        "name": "candycraft:records/cd-2",
-        "stream": true
-      }
-    ]
-  },
   "cd-1": {
     "replace": true,
     "sounds": [
@@ -26,11 +8,29 @@
       }
     ]
   },
+  "cd-4": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "candycraft:records/cd-4",
+        "stream": true
+      }
+    ]
+  },
   "cd-3": {
     "replace": true,
     "sounds": [
       {
         "name": "candycraft:records/cd-3",
+        "stream": true
+      }
+    ]
+  },
+  "cd-2": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "candycraft:records/cd-2",
         "stream": true
       }
     ]

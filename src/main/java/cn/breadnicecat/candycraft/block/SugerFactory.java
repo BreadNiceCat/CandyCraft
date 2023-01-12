@@ -7,8 +7,8 @@ import net.minecraft.world.level.block.Block;
  * @date 2022/12/24 14:06
  */
 public class SugerFactory extends Block {
-	public SugerFactory() {
-		super(BlockManager.newBlockProp().requiresCorrectToolForDrops());
+	public SugerFactory(Properties properties) {
+		super(properties);
 	}
 	//TODO GUI
 }

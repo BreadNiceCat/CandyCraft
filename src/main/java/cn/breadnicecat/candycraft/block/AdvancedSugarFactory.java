@@ -5,5 +5,8 @@ package cn.breadnicecat.candycraft.block;
  * @date 2022/12/30 20:09
  */
 public class AdvancedSugarFactory extends SugerFactory {
+	public AdvancedSugarFactory(Properties properties) {
+		super(properties);
+	}
 	//TODO GUI
 }

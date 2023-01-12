@@ -1,3 +1,4 @@
+//file:noinspection GroovyAssignabilityCheck
 buildscript {
     repositories {
         maven { url = "https://maven.aliyun.com/repository/public" }
@@ -22,16 +23,16 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'org.parchmentmc.librarian.forgegradle'
 
 version = '1.0.0'
-group = 'indi.bread_nicecat.candycraft'
+group = 'cn.breadnicecat.candycraft'
 boolean isSnapshot = true
-archivesBaseName = (isSnapshot ? (new Date().format("yyyyMMdd") + "-snapshot-") : "") + 'Candycraft'
+archivesBaseName = (isSnapshot ? (new Date().format("yyyyMMdd:HH:mm:ss") + "-snapshot-") : "") + 'Candycraft'
 
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
 println "Java: ${System.getProperty 'java.version'}, JVM: ${System.getProperty 'java.vm.version'} (${System.getProperty 'java.vendor'}), Arch: ${System.getProperty 'os.arch'}"
 minecraft {
-    mappings channel: 'parchment', version: '2022.07.10-1.18.2'
+    mappings channel: 'parchment', version: '2022.11.06-1.18.2'
     accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
     runs {
         client {
@@ -86,7 +87,7 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
     flatDir {
-        dir 'libs'
+        dir "libs"
     }
     maven { url = "https://maven.aliyun.com/repository/public" }
     maven { url = "https://dvs1.progwml6.com/files/maven/" }
@@ -94,9 +95,13 @@ repositories {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.18.2-40.0.0'
-    implementation fg.deobf("mezz.jei:jei-1.18.2:9.4.1.113")
-//    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+    minecraft 'net.minecraftforge:forge:1.18.2-40.0.7'
+    implementation fg.deobf("mezz.jei:jei-1.18.2:9.7.2.281")
+    runtimeOnly fg.deobf("a:configured:2.0.0-1.18.2")
+    runtimeOnly fg.deobf("a:bettertags:1.18.2-1.0")
+    runtimeOnly fg.deobf("a:IconRenderer:Forge-1.0.2-1.18.2")
+    runtimeOnly fg.deobf("a:Jade:1.18.2-forge-5.2.6")
+    //    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 }
 
 jar {

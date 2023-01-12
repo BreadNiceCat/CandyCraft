@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "candycraft:item/jelly_dungeon_key"
+  }
+}

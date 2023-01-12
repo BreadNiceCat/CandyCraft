@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "side": "candycraft:block/pudding_side",
+    "bottom": "candycraft:block/flour",
+    "top": "candycraft:block/pudding_top"
+  }
+}

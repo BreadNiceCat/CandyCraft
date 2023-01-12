@@ -1,0 +1,26 @@
+{
+  "replace": false,
+  "values": [
+    "candycraft:licorice_furnace",
+    "candycraft:sugar_factory",
+    "candycraft:advanced_sugar_factory",
+    "candycraft:chocolate_stone",
+    "candycraft:chocolate_cobblestone",
+    "candycraft:caramel_block",
+    "candycraft:candy_cane_block",
+    "candycraft:jelly_ore",
+    "candycraft:trampojelly",
+    "candycraft:red_trampojelly",
+    "candycraft:purple_trampojelly",
+    "candycraft:jelly_shock_absorber",
+    "candycraft:licorice_ore",
+    "candycraft:licorice_block",
+    "candycraft:nougat_ore",
+    "candycraft:nougat_block",
+    "candycraft:nougat_head",
+    "candycraft:honeycomb_ore",
+    "candycraft:honeycomb_block",
+    "candycraft:pez_ore",
+    "candycraft:pez_block"
+  ]
+}

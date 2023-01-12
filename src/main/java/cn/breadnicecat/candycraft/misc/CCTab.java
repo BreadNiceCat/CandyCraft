@@ -1,7 +1,7 @@
 package cn.breadnicecat.candycraft.misc;
 
-import cn.breadnicecat.candycraft.CandyCraft;
-import cn.breadnicecat.candycraft.item.ItemManager;
+import cn.breadnicecat.candycraft.data.CCDatagenManager;
+import cn.breadnicecat.candycraft.item.CCItemManager;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import org.jetbrains.annotations.NotNull;
@@ -13,11 +13,11 @@ import org.jetbrains.annotations.NotNull;
 public class CCTab extends CreativeModeTab {
 	public CCTab() {
 		super("candycrafttab");
-		CandyCraft.CORE_INSTANCE.getDatagenHelper().langEn.put("itemGroup.candycrafttab", "CandyCraft");
+		CCDatagenManager.langEn.put("itemGroup.candycrafttab", "CandyCraft");
 	}
 
 	@Override
 	public @NotNull ItemStack makeIcon() {
-		return ItemManager.pez.get().getDefaultInstance();
+		return CCItemManager.pez.get().getDefaultInstance();
 	}
 }

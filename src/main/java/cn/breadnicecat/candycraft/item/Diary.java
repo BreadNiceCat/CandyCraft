@@ -14,7 +14,7 @@ import org.jetbrains.annotations.NotNull;
  */
 public class Diary extends Item {
 	public Diary() {
-		super(ItemManager.newDefaultItemProperties());
+		super(CCItemManager.newDefaultItemProperties());
 	}
 
 	@Override

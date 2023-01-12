@@ -17,7 +17,7 @@ import org.jetbrains.annotations.NotNull;
 public class WaterMask extends ArmorItem {
 
 	public WaterMask() {
-		super(CCArmorMaterials.WaterMask, EquipmentSlot.HEAD, ItemManager.newDefaultItemProperties());
+		super(CCArmorMaterials.WaterMask, EquipmentSlot.HEAD, CCItemManager.newDefaultItemProperties());
 	}
 
 	@Override

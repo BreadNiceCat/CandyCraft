@@ -15,6 +15,6 @@ public class CCJEIPlugin implements IModPlugin {
 
 	@Override
 	public @NotNull ResourceLocation getPluginUid() {
-		return CandyCraft.CORE_INSTANCE.prefix("jei");
+		return CandyCraft.prefix("jei");
 	}
 }

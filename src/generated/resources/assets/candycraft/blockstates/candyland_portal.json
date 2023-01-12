@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "candycraft:block/candyland_portal_ns"
+    },
+    "axis=z": {
+      "model": "candycraft:block/candyland_portal_ew"
+    }
+  }
+}

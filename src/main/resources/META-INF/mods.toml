@@ -1,14 +1,20 @@
 modLoader = "javafml"
 loaderVersion = "[40,)"
 license = "GNU GPLv3.0"
-issueTrackerURL = "https://github.com/BreadNiceCat/CandyCraft/issues"
+issueTrackerURL = "https://gitee.com/Bread_NiceCat/candycraft/issues"
 [[mods]]
 modId = "candycraft"
 version = "${file.jarVersion}"
 displayName = "CandyCraft"
 #updateJSONURL = "https://gitee.com/Bread_NiceCat/candycraft/raw/master/update.json"
 logoFile = "logo.png"
-authors = "Bread_NiceCat"
-credits = "Star_Ocean_Sama(resources), Valentin4311(original mod)"
+authors = "Bread_NiceCat, Star_Ocean_Sama"
+credits = "Valentin4311(original mod)"
 description = '''
 '''
+[[dependencies.candycraft]]
+modId = "forge"
+mandatory = true
+versionRange = "[40.0.7,)"
+ordering = "NONE"
+side = "BOTH"

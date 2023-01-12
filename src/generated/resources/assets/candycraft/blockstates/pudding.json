@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "ice_flavor=false": {
+      "model": "candycraft:block/pudding"
+    },
+    "ice_flavor=true": {
+      "model": "candycraft:block/pudding_ice_flavor"
+    }
+  }
+}

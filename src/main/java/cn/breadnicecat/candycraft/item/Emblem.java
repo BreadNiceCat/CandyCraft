@@ -16,7 +16,7 @@ import java.util.List;
  */
 public class Emblem extends Item {
 	public Emblem() {
-		super(ItemManager.newDefaultItemProperties(1));
+		super(CCItemManager.newDefaultItemProperties(1));
 	}
 
 	@Override
