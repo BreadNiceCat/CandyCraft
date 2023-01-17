@@ -1,5 +1,6 @@
 package cn.breadnicecat.candycraft.event;
 
+import cn.breadnicecat.candycraft.CandyCraft;
 import cn.breadnicecat.candycraft.item.CCItemManager;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraftforge.event.TickEvent;
@@ -11,7 +12,7 @@ import net.minecraftforge.fml.common.Mod;
  * @author <a href="https://gitee.com/Bread_NiceCat">Bread_NiceCat</a>
  * @date 2022/12/23 13:50
  */
-@Mod.EventBusSubscriber
+@Mod.EventBusSubscriber(modid = CandyCraft.MODID)
 public class ForgeEventListener {
 	@SubscribeEvent
 	public static void onLivingFall(LivingFallEvent event) {

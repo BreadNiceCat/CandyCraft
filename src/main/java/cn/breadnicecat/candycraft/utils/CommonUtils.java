@@ -6,6 +6,7 @@ import java.util.Set;
 /**
  * @author <a href="https://gitee.com/Bread_NiceCat">Bread_NiceCat</a>
  * @date 2022/12/30 15:32
+ * 非mc特有
  */
 public class CommonUtils {
 	/**

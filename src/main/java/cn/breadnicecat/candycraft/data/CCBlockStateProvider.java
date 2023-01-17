@@ -66,6 +66,7 @@ public class CCBlockStateProvider extends BlockStateProvider {
 		});
 	}
 
+	@FunctionalInterface
 	public interface BlockStateModelGenerator extends SuBiConsumer<CCBlockStateProvider, String, Block> {
 		/**
 		 * 六面同贴图
@@ -138,7 +139,7 @@ public class CCBlockStateProvider extends BlockStateProvider {
 					.texture("torch", tex);
 			WallTorchBlock wallTorch = (WallTorchBlock) Registry.BLOCK.get(provider.modLoc("wall_" + name));
 			provider.simpleBlock(block, torch);
-			provider.simpleBlock(wallTorch, wallModel);
+			provider.horizontalBlock(wallTorch, wallModel, 90);
 			provider.itemModels().withExistingParent(name, GENERATED)
 					.texture("layer0", tex);
 		};

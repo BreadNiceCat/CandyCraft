@@ -2,6 +2,9 @@
   "replace": false,
   "values": [
     "candycraft:marshmallow_crafting_table",
+    "candycraft:marshmallow_log",
+    "candycraft:light_marshmallow_log",
+    "candycraft:dark_marshmallow_log",
     "candycraft:marshmallow_door"
   ]
 }

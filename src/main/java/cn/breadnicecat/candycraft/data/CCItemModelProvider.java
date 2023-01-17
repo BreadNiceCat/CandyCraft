@@ -22,9 +22,10 @@ public class CCItemModelProvider extends ItemModelProvider {
 
 	@Override
 	protected void registerModels() {
-		CCDatagenManager.itemModel.forEach((name, consumer) -> consumer.accept(this, name));
+		CCDatagenManager.itemModelGenerators.forEach((name, consumer) -> consumer.accept(this, name));
 	}
 
+	@FunctionalInterface
 	public interface ItemModelGenerator extends BiConsumer<CCItemModelProvider, String> {
 		ItemModelGenerator SIMPLE_ITEM_GENERATOR = (provider, name) -> provider.withExistingParent(name, GENERATED).texture("layer0", provider.modLoc(ITEM_FOLDER + "/" + name));
 		ItemModelGenerator HANDHELD_GENERATOR = (provider, name) -> provider.withExistingParent(name, HANDHELD).texture("layer0", provider.modLoc(ITEM_FOLDER + "/" + name));

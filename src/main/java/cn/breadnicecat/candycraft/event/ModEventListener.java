@@ -1,6 +1,7 @@
 package cn.breadnicecat.candycraft.event;
 
 import cn.breadnicecat.candycraft.CandyCraft;
+import cn.breadnicecat.candycraft.block.CCBlockRegisterHelper;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
@@ -22,14 +23,14 @@ import static cn.breadnicecat.candycraft.block.CCBlockManager.*;
  * @author <a href="https://gitee.com/Bread_NiceCat">Bread_NiceCat</a>
  * @date 2023/1/1 11:22
  */
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, modid = CandyCraft.MODID)
 public class ModEventListener {
 	public static void onFMLCommonSetup(FMLCommonSetupEvent event) {
 	}
 
 	@SubscribeEvent
 	public static void onFMLClientSetup(FMLClientSetupEvent event) {
-		CandyCraft.LOGGER.info("FMLClientSetupEvent hit");
+		//setRendererLayer
 		{
 			RenderType translucent = RenderType.translucent();
 			setRendererLayer(candyland_portal, translucent);
@@ -67,7 +68,7 @@ public class ModEventListener {
 	}
 
 	@OnlyIn(Dist.CLIENT)
-	private static void setRendererLayer(BlockRegistryObject<? extends Block> regisryObject, RenderType type) {
+	private static void setRendererLayer(CCBlockRegisterHelper.BlockRegistryObject<? extends Block> regisryObject, RenderType type) {
 		ItemBlockRenderTypes.setRenderLayer(regisryObject.block().get(), type);
 	}
 }

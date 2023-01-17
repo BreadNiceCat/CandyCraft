@@ -1,6 +1,10 @@
 {
   "replace": false,
   "values": [
-    "candycraft:sugar_block"
+    "candycraft:sugar_block",
+    "candycraft:ice_cream",
+    "candycraft:mint_ice_cream",
+    "candycraft:strawberry_ice_cream",
+    "candycraft:blueberry_ice_cream"
   ]
 }

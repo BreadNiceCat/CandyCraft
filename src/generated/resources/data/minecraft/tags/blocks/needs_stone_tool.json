@@ -2,9 +2,6 @@
   "replace": false,
   "values": [
     "candycraft:jelly_ore",
-    "candycraft:nougat_ore",
-    "candycraft:nougat_block",
-    "candycraft:nougat_head",
     "candycraft:honeycomb_ore",
     "candycraft:honeycomb_block"
   ]
