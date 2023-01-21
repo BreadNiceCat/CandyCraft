@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "candycraft:cotton_candy"
+    },
+    {
+      "item": "candycraft:cotton_candy"
+    },
+    {
+      "item": "candycraft:cotton_candy"
+    },
+    {
+      "item": "candycraft:cotton_candy"
+    },
+    {
+      "item": "candycraft:cotton_candy"
+    },
+    {
+      "item": "candycraft:cotton_candy"
+    },
+    {
+      "item": "candycraft:cotton_candy"
+    },
+    {
+      "item": "candycraft:cotton_candy"
+    },
+    {
+      "item": "candycraft:cotton_candy"
+    }
+  ],
+  "result": {
+    "item": "candycraft:cotton_candy_block"
+  }
+}

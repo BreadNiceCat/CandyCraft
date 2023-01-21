@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    " / ",
+    " / "
+  ],
+  "key": {
+    "#": {
+      "tag": "candycraft:jawbreaker"
+    },
+    "/": {
+      "item": "candycraft:marshmallow_stick"
+    }
+  },
+  "result": {
+    "item": "candycraft:jawbreaker_pickaxe"
+  }
+}

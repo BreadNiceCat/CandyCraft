@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "candycraft:banana_seaweed"
+    },
+    {
+      "item": "candycraft:banana_seaweed"
+    },
+    {
+      "item": "candycraft:banana_seaweed"
+    },
+    {
+      "item": "candycraft:banana_seaweed"
+    },
+    {
+      "item": "candycraft:banana_seaweed"
+    },
+    {
+      "item": "candycraft:banana_seaweed"
+    },
+    {
+      "item": "candycraft:banana_seaweed"
+    },
+    {
+      "item": "candycraft:banana_seaweed"
+    },
+    {
+      "item": "candycraft:banana_seaweed"
+    }
+  ],
+  "result": {
+    "item": "candycraft:banana_seaweeds_block"
+  }
+}

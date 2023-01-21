@@ -11,8 +11,8 @@ import static cn.breadnicecat.candycraft.CandyCraft.prefix;
  * @date 2022/12/24 16:34
  */
 public final class CCBlockTags {
-	public static final TagKey<Block> SUGARY_BLOCK = BlockTags.create(prefix("sugary_block"));
-	public static final TagKey<Block> CANDYLAND_PORTAL_FRAME = BlockTags.create(prefix("candyland_portal_frame"));
-	public static final TagKey<Block> CANDY_SAPLING_CAN_PLACE_ON = BlockTags.create(prefix("candy_sapling_can_place_on"));
+    public static final TagKey<Block> SUGARY_BLOCK = BlockTags.create(prefix("sugary_block"));
+    public static final TagKey<Block> CANDYLAND_PORTAL_FRAME = BlockTags.create(prefix("candyland_portal_frame"));
+    public static final TagKey<Block> CANDY_PLANT_CAN_PLACE_ON = BlockTags.create(prefix("candy_sapling_can_place_on"));
 
 }

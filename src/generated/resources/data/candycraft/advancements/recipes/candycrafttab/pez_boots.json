@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "candycraft:pez_boots"
+    ]
+  },
+  "criteria": {
+    "has_pez": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "candycraft:pez"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "candycraft:pez_boots"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_pez",
+      "has_the_recipe"
+    ]
+  ]
+}

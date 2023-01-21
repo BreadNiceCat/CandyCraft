@@ -1,10 +1,18 @@
 {
   "variants": {
-    "axis=x": {
-      "model": "candycraft:block/candyland_portal_ns"
+    "axis=x,upgrade=false": {
+      "model": "candycraft:block/candyland_portal",
+      "y": 90
     },
-    "axis=z": {
-      "model": "candycraft:block/candyland_portal_ew"
+    "axis=z,upgrade=false": {
+      "model": "candycraft:block/candyland_portal"
+    },
+    "axis=x,upgrade=true": {
+      "model": "candycraft:block/candyland_portal_upgrade",
+      "y": 90
+    },
+    "axis=z,upgrade=true": {
+      "model": "candycraft:block/candyland_portal_upgrade"
     }
   }
 }

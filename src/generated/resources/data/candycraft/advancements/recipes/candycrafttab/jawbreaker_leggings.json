@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "candycraft:jawbreaker_leggings"
+    ]
+  },
+  "criteria": {
+    "has_jawbreaker": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "candycraft:jawbreaker"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "candycraft:jawbreaker_leggings"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_jawbreaker",
+      "has_the_recipe"
+    ]
+  ]
+}

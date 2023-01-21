@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "candycraft:pez_dust"
+    },
+    {
+      "item": "candycraft:pez_dust"
+    },
+    {
+      "item": "candycraft:pez_dust"
+    },
+    {
+      "item": "candycraft:pez_dust"
+    },
+    {
+      "item": "candycraft:pez_dust"
+    },
+    {
+      "item": "candycraft:pez_dust"
+    },
+    {
+      "item": "candycraft:pez_dust"
+    },
+    {
+      "item": "candycraft:pez_dust"
+    },
+    {
+      "item": "candycraft:pez_dust"
+    }
+  ],
+  "result": {
+    "item": "candycraft:pez_block"
+  }
+}

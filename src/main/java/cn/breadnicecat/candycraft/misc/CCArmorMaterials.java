@@ -20,14 +20,14 @@ import static cn.breadnicecat.candycraft.CandyCraft.prefix;
  * @date 2022/12/22 21:15
  */
 public class CCArmorMaterials {
-	public static final ArmorMaterial JellyCrown = new ArmorMaterialImpl("jelly_crown", 15, new int[]{4, 0, 0, 0}, 20, SoundEvents.ARMOR_EQUIP_TURTLE, 0F, 0F, () -> Ingredient.EMPTY);
-	public static final ArmorMaterial TrampoJellyBoots = new ArmorMaterialImpl("trampojelly_boots", 10, new int[4], 8, SoundEvents.ARMOR_EQUIP_TURTLE, 0F, 0F, () -> Ingredient.of(CCItemManager.cranberry_scale.get()));
+	public static final ArmorMaterial JELLY_CROWN = new ArmorMaterialImpl("jelly_crown", 15, new int[]{4, 0, 0, 0}, 20, SoundEvents.ARMOR_EQUIP_TURTLE, 0F, 0F, () -> Ingredient.EMPTY);
+	public static final ArmorMaterial TRAMPOJELLY_BOOTS = new ArmorMaterialImpl("trampojelly_boots", 10, new int[4], 8, SoundEvents.ARMOR_EQUIP_TURTLE, 0F, 0F, () -> Ingredient.of(CCItemManager.cranberry_scale.get()));
 
-	public static final ArmorMaterial WaterMask = new ArmorMaterialImpl("water_mask", 10, new int[4], 8, SoundEvents.ARMOR_EQUIP_TURTLE, 0F, 0F, () -> Ingredient.of(CCBlockManager.jelly_shock_absorber.block().get()));
-	public static final ArmorMaterial LICORICE = new ArmorMaterialImpl("licorice", 13, new int[]{1, 4, 5, 2}, 12, SoundEvents.ARMOR_EQUIP_CHAIN, 0.0F, 0.0F, () -> Ingredient.of(CCItemManager.licorice.get()));
-	public static final ArmorMaterial HONEYCOMB = new ArmorMaterialImpl("honeycomb", 15, new int[]{2, 5, 6, 2}, 9, SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> Ingredient.of(CCItemManager.honeycomb.get()));
-	public static final ArmorMaterial PEZ = new ArmorMaterialImpl("pez", 33, new int[]{3, 6, 8, 3}, 10, SoundEvents.ARMOR_EQUIP_DIAMOND, 2.0F, 0.0F, () -> Ingredient.of(CCItemManager.pez.get()));
-	public static final ArmorMaterial JAWBREAKER = new ArmorMaterialImpl("jawbreaker", 37, new int[]{3, 6, 8, 3}, 15, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> Ingredient.of(CCItemManager.jawbreaker.get()));
+	public static final ArmorMaterial WATER_MASK = new ArmorMaterialImpl("water_mask", 10, new int[4], 8, SoundEvents.ARMOR_EQUIP_TURTLE, 0F, 0F, () -> Ingredient.of(CCBlockManager.jelly_shock_absorber.block().get()));
+	public static final ArmorMaterial LICORICE = new ArmorMaterialImpl("licorice", 13, new int[]{1, 4, 5, 2}, 12, SoundEvents.ARMOR_EQUIP_CHAIN, 0.0F, 0.0F, () -> Ingredient.of(CCItemTags.LICORICE));
+	public static final ArmorMaterial HONEYCOMB = new ArmorMaterialImpl("honeycomb", 15, new int[]{2, 5, 6, 2}, 9, SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.0F, () -> Ingredient.of(CCItemTags.HONEYCOMB));
+	public static final ArmorMaterial PEZ = new ArmorMaterialImpl("pez", 33, new int[]{3, 6, 8, 3}, 10, SoundEvents.ARMOR_EQUIP_DIAMOND, 2.0F, 0.0F, () -> Ingredient.of(CCItemTags.PEZ));
+	public static final ArmorMaterial JAWBREAKER = new ArmorMaterialImpl("jawbreaker", 37, new int[]{3, 6, 8, 3}, 15, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, () -> Ingredient.of(CCItemTags.JAWBREAKER));
 
 	/**
 	 * @author <a href="https://gitee.com/Bread_NiceCat">Bread_NiceCat</a>

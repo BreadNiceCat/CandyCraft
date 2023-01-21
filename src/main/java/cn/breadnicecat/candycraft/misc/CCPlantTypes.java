@@ -7,5 +7,6 @@ import net.minecraftforge.common.PlantType;
  * @date 2023/1/11 15:16
  */
 public final class CCPlantTypes {
-	public static PlantType CandyPlain = PlantType.get("candy_plain");
+    public static final PlantType CANDY_CROP = PlantType.get("candy_drop");
+    public static final PlantType CANDY_PLANT = PlantType.get("candy_plant");
 }

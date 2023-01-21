@@ -10,19 +10,22 @@ import net.minecraftforge.fml.config.ModConfig;
  * @date 2022/12/31 17:50
  */
 public final class CCConfig {
-	public static final ForgeConfigSpec commonConfigSpec;
+    public static final ForgeConfigSpec commonConfigSpec;
 
-	public static final ForgeConfigSpec.BooleanValue canJoinCandyland;
+    public static final ForgeConfigSpec.BooleanValue CAN_JOIN_CANDYLAND,
+            CAN_RETURN_FORM_CANDYLAND;
 
-	static {
-		CandyCraft.clockIn(CCConfig.class);
-		ForgeConfigSpec.Builder builder = new ForgeConfigSpec.Builder();
-		canJoinCandyland = builder.define("canJoinCandyland", true);
+    static {
+        CandyCraft.clockIn();
+        ForgeConfigSpec.Builder builder = new ForgeConfigSpec.Builder();
+        builder.push("DIM Settings");
+        CAN_JOIN_CANDYLAND = builder.comment("Players can't join Candyland by portal if false.").define("can_join_candyland", true);
+        CAN_RETURN_FORM_CANDYLAND = builder.comment("Players can't return from Candyland to Overworld with upgraded portal if false.").define("can_return_form_Candyland", true);
+        builder.pop();
+        commonConfigSpec = builder.build();
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, commonConfigSpec);
+    }
 
-		commonConfigSpec = builder.build();
-		ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, commonConfigSpec);
-	}
-
-	public static void init() {
-	}
+    public static void init() {
+    }
 }

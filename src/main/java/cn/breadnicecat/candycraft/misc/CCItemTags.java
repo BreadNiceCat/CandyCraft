@@ -16,7 +16,15 @@ public final class CCItemTags {
 	 * 可以放进制糖机
 	 */
 	public static final TagKey<Item> SUGARY = create("sugary");
-	public static final TagKey<Item> CANDY_PLANK = create("candy_plank");
+	public static final TagKey<Item> MARSHMALLOW_PLANKS = create("marshmallow_planks");
+	public static final TagKey<Item> MARSHMALLOW_LOG = create("marshmallow_log");
+	public static final TagKey<Item> LICORICE = create("licorice");
+	public static final TagKey<Item> HONEYCOMB = create("honeycomb");
+	public static final TagKey<Item> PEZ = create("pez");
+	public static final TagKey<Item> JAWBREAKER = create("jawbreaker");
+	public static final TagKey<Item> RETURN_TICKET = create("return_ticket");
+	public static final TagKey<Item> CARAMEL_GLASS = create("caramel_glass");
+
 
 	static {
 		CCDatagenManager.similarTags.put(CCBlockTags.SUGARY_BLOCK, CCItemTags.SUGARY);//含糖方块一定含糖（废话）

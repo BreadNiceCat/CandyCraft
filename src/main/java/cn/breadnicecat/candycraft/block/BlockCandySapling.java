@@ -15,17 +15,25 @@ import org.jetbrains.annotations.NotNull;
  * @date 2023/1/1 13:08
  */
 public class BlockCandySapling extends SaplingBlock {
-	public BlockCandySapling(AbstractTreeGrower pTreeGrower, Properties pProperties) {
-		super(pTreeGrower, pProperties);
-	}
+    public BlockCandySapling(AbstractTreeGrower pTreeGrower, Properties pProperties) {
+        super(pTreeGrower, pProperties);
+    }
 
-	@Override
-	public PlantType getPlantType(BlockGetter level, BlockPos pos) {
-		return CCPlantTypes.CandyPlain;
-	}
+    @Override
+    public PlantType getPlantType(BlockGetter level, BlockPos pos) {
+        return CCPlantTypes.CANDY_PLANT;
+    }
 
-	@Override
-	protected boolean mayPlaceOn(BlockState pState, @NotNull BlockGetter pLevel, @NotNull BlockPos pPos) {
-		return pState.is(CCBlockTags.CANDY_SAPLING_CAN_PLACE_ON);
-	}
+    @Override
+    protected boolean mayPlaceOn(BlockState pState, @NotNull BlockGetter pLevel, @NotNull BlockPos pPos) {
+        return pState.is(CCBlockTags.CANDY_PLANT_CAN_PLACE_ON);
+    }
+
+    /**
+     * 不应用骨粉催
+     */
+    @Override
+    public boolean isValidBonemealTarget(@NotNull BlockGetter pLevel, @NotNull BlockPos pPos, @NotNull BlockState pState, boolean pIsClient) {
+        return false;
+    }
 }

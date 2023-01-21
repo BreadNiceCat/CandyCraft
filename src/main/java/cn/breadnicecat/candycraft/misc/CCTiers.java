@@ -10,21 +10,18 @@ import net.minecraftforge.common.util.Lazy;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import javax.annotation.Nonnull;
 import java.util.function.Supplier;
-
-import static cn.breadnicecat.candycraft.item.CCItemManager.*;
 
 /**
  * @author <a href="https://gitee.com/Bread_NiceCat">Bread_NiceCat</a>
  * @date 2022/12/22 21:30
  */
 public class CCTiers {
-	public static final Tier MARSHMALLOW = new TierImpl(0, 59, 2.0F, 0.0F, 15, ForgeHooks.getTagFromVanillaTier(Tiers.WOOD), () -> Ingredient.of(CCItemTags.CANDY_PLANK));
-	public static final Tier LICORICE = new TierImpl(1, 131, 4.0F, 1.0F, 5, ForgeHooks.getTagFromVanillaTier(Tiers.STONE), () -> Ingredient.of(licorice.get()));
-	public static final Tier HONEYCOMB = new TierImpl(2, 250, 6.0F, 2.0F, 14, ForgeHooks.getTagFromVanillaTier(Tiers.IRON), () -> Ingredient.of(honeycomb.get()));
-	public static final Tier PEZ = new TierImpl(3, 1561, 8.0F, 3.0F, 10, ForgeHooks.getTagFromVanillaTier(Tiers.DIAMOND), () -> Ingredient.of(pez.get()));
-	public static final Tier JAWBREAKER = new TierImpl(4, 2031, 9.0F, 4.0F, 15, ForgeHooks.getTagFromVanillaTier(Tiers.NETHERITE), () -> Ingredient.of(jawbreaker.get()));
+	public static final Tier MARSHMALLOW = new TierImpl(0, 59, 2.0F, 0.0F, 15, ForgeHooks.getTagFromVanillaTier(Tiers.WOOD), () -> Ingredient.of(CCItemTags.MARSHMALLOW_PLANKS));
+	public static final Tier LICORICE = new TierImpl(1, 131, 4.0F, 1.0F, 5, ForgeHooks.getTagFromVanillaTier(Tiers.STONE), () -> Ingredient.of(CCItemTags.LICORICE));
+	public static final Tier HONEYCOMB = new TierImpl(2, 250, 6.0F, 2.0F, 14, ForgeHooks.getTagFromVanillaTier(Tiers.IRON), () -> Ingredient.of(CCItemTags.HONEYCOMB));
+	public static final Tier PEZ = new TierImpl(3, 1561, 8.0F, 3.0F, 10, ForgeHooks.getTagFromVanillaTier(Tiers.DIAMOND), () -> Ingredient.of(CCItemTags.PEZ));
+	public static final Tier JAWBREAKER = new TierImpl(4, 2031, 9.0F, 4.0F, 15, ForgeHooks.getTagFromVanillaTier(Tiers.NETHERITE), () -> Ingredient.of(CCItemTags.JAWBREAKER));
 
 	/**
 	 * @author <a href="https://gitee.com/Bread_NiceCat">Bread_NiceCat</a>
@@ -93,7 +90,7 @@ public class CCTiers {
 			return this.tag;
 		}
 
-		@Nonnull
+		@NotNull
 		@Override
 		public Ingredient getRepairIngredient() {
 			return this.repairIngredient.get();

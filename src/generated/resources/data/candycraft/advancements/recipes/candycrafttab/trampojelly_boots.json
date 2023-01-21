@@ -1,0 +1,39 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "candycraft:trampojelly_boots"
+    ]
+  },
+  "criteria": {
+    "has_sugar_crystal_and_jelly_shock_absorber": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "candycraft:sugar_crystal"
+            ]
+          },
+          {
+            "items": [
+              "candycraft:jelly_shock_absorber"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "candycraft:trampojelly_boots"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_sugar_crystal_and_jelly_shock_absorber",
+      "has_the_recipe"
+    ]
+  ]
+}

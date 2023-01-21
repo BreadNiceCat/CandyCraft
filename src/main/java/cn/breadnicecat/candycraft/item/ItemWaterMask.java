@@ -16,15 +16,15 @@ import org.jetbrains.annotations.NotNull;
  */
 public class ItemWaterMask extends ArmorItem {
 
-	public ItemWaterMask(Properties prop) {
-		super(CCArmorMaterials.WaterMask, EquipmentSlot.HEAD, prop);
-	}
+    public ItemWaterMask(Properties prop) {
+        super(CCArmorMaterials.WATER_MASK, EquipmentSlot.HEAD, prop);
+    }
 
-	@Override
-	public void onArmorTick(ItemStack stack, Level level, @NotNull Player player) {
-		if (player.isUnderWater()) {
-			player.addEffect(new MobEffectInstance(MobEffects.WATER_BREATHING, 20, 0, false, false, false));
-			player.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 20, 0, false, false, false));
-		}
-	}
+    @Override
+    public void onArmorTick(ItemStack stack, Level level, @NotNull Player player) {
+        if (player.isUnderWater()) {
+            player.addEffect(new MobEffectInstance(MobEffects.WATER_BREATHING, 20, 0, false, false, false));
+            player.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, 20, 0, false, false, false));
+        }
+    }
 }

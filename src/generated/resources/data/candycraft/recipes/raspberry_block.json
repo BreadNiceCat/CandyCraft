@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "candycraft:rope_raspberry"
+    },
+    {
+      "item": "candycraft:rope_raspberry"
+    },
+    {
+      "item": "candycraft:rope_raspberry"
+    },
+    {
+      "item": "candycraft:rope_raspberry"
+    },
+    {
+      "item": "candycraft:rope_raspberry"
+    },
+    {
+      "item": "candycraft:rope_raspberry"
+    },
+    {
+      "item": "candycraft:rope_raspberry"
+    },
+    {
+      "item": "candycraft:rope_raspberry"
+    },
+    {
+      "item": "candycraft:rope_raspberry"
+    }
+  ],
+  "result": {
+    "item": "candycraft:raspberry_block"
+  }
+}

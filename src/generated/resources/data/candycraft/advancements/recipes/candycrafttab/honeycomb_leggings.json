@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "candycraft:honeycomb_leggings"
+    ]
+  },
+  "criteria": {
+    "has_honeyconb": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "candycraft:honeycomb"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "candycraft:honeycomb_leggings"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_honeyconb",
+      "has_the_recipe"
+    ]
+  ]
+}

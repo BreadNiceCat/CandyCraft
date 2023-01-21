@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "candycraft:block/dragibus_crops_0"
+  }
+}

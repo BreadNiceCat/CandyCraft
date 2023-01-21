@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "candycraft:candy_cane_block"
+    ]
+  },
+  "criteria": {
+    "has_candy_cane": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "candycraft:candy_cane"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "candycraft:candy_cane_block"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_candy_cane",
+      "has_the_recipe"
+    ]
+  ]
+}

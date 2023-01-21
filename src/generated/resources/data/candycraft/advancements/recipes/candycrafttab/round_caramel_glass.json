@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "candycraft:round_caramel_glass"
+    ]
+  },
+  "criteria": {
+    "has_any_caramel_glass": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "candycraft:caramel_glass"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "candycraft:round_caramel_glass"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_any_caramel_glass",
+      "has_the_recipe"
+    ]
+  ]
+}

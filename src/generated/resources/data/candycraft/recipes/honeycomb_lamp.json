@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "candycraft:honeycomb_torch"
+    },
+    {
+      "item": "candycraft:honeycomb_block"
+    }
+  ],
+  "result": {
+    "item": "candycraft:honeycomb_lamp"
+  }
+}

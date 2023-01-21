@@ -2,10 +2,10 @@ package cn.breadnicecat.candycraft.misc;
 
 import cn.breadnicecat.candycraft.CandyCraft;
 import cn.breadnicecat.candycraft.data.CCDatagenManager;
+import cn.breadnicecat.candycraft.utils.LambdaUtils.LazySupplier;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraftforge.common.data.SoundDefinition;
-import net.minecraftforge.common.util.Lazy;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.Nullable;
@@ -31,7 +31,7 @@ public final class CCSoundEvents {
 	public static final RegistryObject<SoundEvent> jelly_step = CCSoundEventHelper.getBuilder("jelly_step").sound("steps/jelly1").sound("steps/jelly2").sound("steps/jelly3").sound("steps/jelly4").build();
 
 	static {
-		CandyCraft.clockIn(CCSoundEvents.class);
+		CandyCraft.clockIn();
 	}
 
 	public static void init() {
@@ -52,7 +52,7 @@ public final class CCSoundEvents {
 		 * @param sound    存在多个sound时，每次播放随机一个
 		 */
 		public static RegistryObject<SoundEvent> registerSoundEvent(String name, Supplier<SoundEvent> soundEvent, boolean replace, @Nullable String subtitle, SoundDefinition.Sound... sound) {
-			Lazy<SoundEvent> supplier = Lazy.of(soundEvent);
+			LazySupplier<SoundEvent> supplier = LazySupplier.of(soundEvent);
 			CCDatagenManager.sounds.put(supplier, SoundDefinition.definition().with(sound).replace(replace).subtitle(subtitle));
 			return REGISTER.register(name, supplier);
 		}

@@ -1,0 +1,39 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "candycraft:water_mask"
+    ]
+  },
+  "criteria": {
+    "has_sugar_crystal_and_cranberry_scale": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "candycraft:sugar_crystal"
+            ]
+          },
+          {
+            "items": [
+              "candycraft:cranberry_scale"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "candycraft:water_mask"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_sugar_crystal_and_cranberry_scale",
+      "has_the_recipe"
+    ]
+  ]
+}

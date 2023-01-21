@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "candycraft:licorice_leggings"
+    ]
+  },
+  "criteria": {
+    "has_licorice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "candycraft:licorice"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "candycraft:licorice_leggings"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_licorice",
+      "has_the_recipe"
+    ]
+  ]
+}

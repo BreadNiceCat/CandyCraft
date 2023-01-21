@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "candycraft:nougat_powder"
+    },
+    {
+      "item": "candycraft:nougat_powder"
+    },
+    {
+      "item": "candycraft:nougat_powder"
+    },
+    {
+      "item": "candycraft:nougat_powder"
+    },
+    {
+      "item": "candycraft:nougat_powder"
+    },
+    {
+      "item": "candycraft:nougat_powder"
+    },
+    {
+      "item": "candycraft:nougat_powder"
+    },
+    {
+      "item": "candycraft:nougat_powder"
+    },
+    {
+      "item": "candycraft:nougat_powder"
+    }
+  ],
+  "result": {
+    "item": "candycraft:nougat_block"
+  }
+}

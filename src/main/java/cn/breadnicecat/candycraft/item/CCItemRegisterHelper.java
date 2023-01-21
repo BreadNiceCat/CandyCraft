@@ -2,11 +2,10 @@ package cn.breadnicecat.candycraft.item;
 
 import cn.breadnicecat.candycraft.CandyCraft;
 import cn.breadnicecat.candycraft.data.CCDatagenManager;
-import cn.breadnicecat.candycraft.data.CCItemModelProvider;
 import cn.breadnicecat.candycraft.utils.CommonUtils;
+import cn.breadnicecat.candycraft.utils.LambdaUtils.LazySupplier;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
-import net.minecraftforge.common.util.Lazy;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.NotNull;
@@ -17,6 +16,8 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.function.Supplier;
+
+import static cn.breadnicecat.candycraft.data.CCItemModelProvider.ItemModelGenerator;
 
 /**
  * @author <a href="https://gitee.com/Bread_NiceCat">Bread_NiceCat</a>
@@ -31,7 +32,7 @@ public class CCItemRegisterHelper {
 	 * @param item           Item
 	 * @param modelGenerator 模型生成器 NOTE:只在runData下可用
 	 */
-	public static <I extends Item> RegistryObject<I> registerItem(@NotNull String name, @Nullable String enLangName, @NotNull Supplier<I> item, @Nullable CCItemModelProvider.ItemModelGenerator modelGenerator) {
+	public static <I extends Item> RegistryObject<I> registerItem(@NotNull String name, @Nullable String enLangName, @NotNull LazySupplier<I> item, @Nullable ItemModelGenerator modelGenerator) {
 		RegistryObject<I> object = REGISTER.register(name, item);
 		if (enLangName != null) CCDatagenManager.langEn.put("item." + CandyCraft.MODID + "." + name, enLangName);
 		if (modelGenerator != null) CCDatagenManager.itemModelGenerators.put(name, modelGenerator);
@@ -55,16 +56,16 @@ public class CCItemRegisterHelper {
 		@NotNull
 		private final String name;
 		@NotNull
-		private final Lazy<I> item;
+		private final LazySupplier<I> item;
 		private final Set<TagKey<Item>> itemTags = new HashSet<>();
 		@Nullable
 		private String enLang = "";
 		@Nullable
-		private CCItemModelProvider.ItemModelGenerator modelGenerator = CCItemModelProvider.ItemModelGenerator.SIMPLE_ITEM_GENERATOR;
+		private ItemModelGenerator modelGenerator = ItemModelGenerator.SIMPLE_ITEM_GENERATOR;
 
 		public Builder(@NotNull String name, @NotNull Supplier<I> item) {
 			this.name = name;
-			this.item = Lazy.of(item);
+			this.item = LazySupplier.of(item);
 		}
 
 		public Builder<I> enName(String enName) {
@@ -78,7 +79,7 @@ public class CCItemRegisterHelper {
 			return this;
 		}
 
-		public Builder<I> model(CCItemModelProvider.ItemModelGenerator generator) {
+		public Builder<I> model(ItemModelGenerator generator) {
 			this.modelGenerator = generator;
 			return this;
 		}

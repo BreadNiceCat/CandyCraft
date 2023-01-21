@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "candycraft:candy_cane"
+    },
+    {
+      "item": "candycraft:candy_cane"
+    },
+    {
+      "item": "candycraft:candy_cane"
+    },
+    {
+      "item": "candycraft:candy_cane"
+    },
+    {
+      "item": "candycraft:candy_cane"
+    },
+    {
+      "item": "candycraft:candy_cane"
+    },
+    {
+      "item": "candycraft:candy_cane"
+    },
+    {
+      "item": "candycraft:candy_cane"
+    },
+    {
+      "item": "candycraft:candy_cane"
+    }
+  ],
+  "result": {
+    "item": "candycraft:candy_cane_block"
+  }
+}

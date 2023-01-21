@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "@ @",
+    "# #"
+  ],
+  "key": {
+    "@": {
+      "item": "candycraft:sugar_crystal"
+    },
+    "#": {
+      "item": "candycraft:jelly_shock_absorber"
+    }
+  },
+  "result": {
+    "item": "candycraft:trampojelly_boots"
+  }
+}

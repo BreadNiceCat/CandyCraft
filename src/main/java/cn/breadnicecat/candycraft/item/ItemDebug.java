@@ -7,7 +7,8 @@ import net.minecraft.world.item.Item;
  * @date 2023/1/17 13:14
  */
 public class ItemDebug extends Item {
-	public ItemDebug(Properties pProperties) {
-		super(pProperties);
-	}
+    public ItemDebug(Properties pProperties) {
+        super(pProperties);
+    }
+
 }

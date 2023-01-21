@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "candycraft:light_marshmallow_log"
+    }
+  ],
+  "result": {
+    "item": "candycraft:light_marshmallow_planks",
+    "count": 4
+  }
+}

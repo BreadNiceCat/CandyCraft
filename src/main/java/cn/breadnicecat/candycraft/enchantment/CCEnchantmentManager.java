@@ -45,6 +45,6 @@ public class CCEnchantmentManager {
 	}
 
 	static {
-		CandyCraft.clockIn(CCEnchantmentManager.class);
+		CandyCraft.clockIn();
 	}
 }

@@ -1,112 +1,12 @@
 {
-  "type": "candycraft:candyland_type",
+  "type": "candycraft:candyland",
   "generator": {
     "type": "minecraft:noise",
     "seed": 0,
-    "settings": {
-      "sea_level": 63,
-      "disable_mob_generation": false,
-      "aquifers_enabled": false,
-      "ore_veins_enabled": false,
-      "legacy_random_source": false,
-      "default_block": {
-        "Name": "candycraft:chocolate_stone"
-      },
-      "default_fluid": {
-        "Name": "minecraft:water",
-        "Properties": {
-          "level": "15"
-        }
-      },
-      "noise": {
-        "min_y": 0,
-        "height": 256,
-        "size_horizontal": 1,
-        "size_vertical": 2,
-        "sampling": {
-          "xz_scale": 0.9999999814507745,
-          "y_scale": 0.9999999814507745,
-          "xz_factor": 80,
-          "y_factor": 160
-        },
-        "bottom_slide": {
-          "target": 0.1171875,
-          "size": 3,
-          "offset": 0
-        },
-        "top_slide": {
-          "target": -0.078125,
-          "size": 2,
-          "offset": 8
-        },
-        "terrain_shaper": {
-          "offset": 0,
-          "factor": 0,
-          "jaggedness": 0
-        }
-      },
-      "noise_router": {
-        "barrier": 0,
-        "fluid_level_floodedness": 0,
-        "fluid_level_spread": 0,
-        "lava": 0,
-        "temperature": 0,
-        "vegetation": 0,
-        "continents": 0,
-        "erosion": 0,
-        "depth": 0,
-        "ridges": 0,
-        "initial_density_without_jaggedness": 0,
-        "final_density": 0,
-        "vein_toggle": 0,
-        "vein_ridged": 0,
-        "vein_gap": 0
-      },
-      "surface_rule": {
-        "type": "minecraft:sequence",
-        "sequence": [
-          {
-            "type": "minecraft:block",
-            "result_state": {
-              "Name": "candycraft:pudding"
-            }
-          },
-          {
-            "type": "minecraft:block",
-            "result_state": {
-              "Name": "candycraft:flour"
-            }
-          }
-        ]
-      }
-    },
+    "settings": "candycraft:candyland",
     "biome_source": {
       "type": "minecraft:multi_noise",
       "biomes": [
-        {
-          "biome": "minecraft:flower_forest",
-          "parameters": {
-            "temperature": 0.2,
-            "humidity": 0.1,
-            "continentalness": 0,
-            "erosion": 0,
-            "weirdness": 0,
-            "depth": 0,
-            "offset": 0
-          }
-        },
-        {
-          "biome": "minecraft:plains",
-          "parameters": {
-            "temperature": 0.1,
-            "humidity": 0.2,
-            "continentalness": 0,
-            "erosion": 0,
-            "weirdness": 0,
-            "depth": 0,
-            "offset": 0
-          }
-        },
         {
           "biome": "candycraft:pudding_plains",
           "parameters": {

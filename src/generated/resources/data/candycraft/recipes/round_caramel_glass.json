@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "candycraft:caramel_glass"
+    }
+  ],
+  "result": {
+    "item": "candycraft:round_caramel_glass"
+  }
+}

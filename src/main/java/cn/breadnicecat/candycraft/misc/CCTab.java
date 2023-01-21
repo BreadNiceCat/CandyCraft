@@ -2,7 +2,7 @@ package cn.breadnicecat.candycraft.misc;
 
 import cn.breadnicecat.candycraft.data.CCDatagenManager;
 import cn.breadnicecat.candycraft.item.CCItemManager;
-import cn.breadnicecat.candycraft.utils.UnmodifiableObject;
+import cn.breadnicecat.candycraft.utils.UndimodifiableObject;
 import net.minecraft.core.NonNullList;
 import net.minecraft.core.Registry;
 import net.minecraft.world.item.CreativeModeTab;
@@ -41,7 +41,7 @@ public final class CCTab extends CreativeModeTab {
 	@SuppressWarnings("deprecation")
 	@Override
 	public void fillItemList(@NotNull NonNullList<ItemStack> pItems) {
-		UnmodifiableObject<EnchantedBookItem> bk = new UnmodifiableObject<>();
+		UndimodifiableObject<EnchantedBookItem> bk = new UndimodifiableObject<>();
 		for (Item item : Registry.ITEM) {
 			if (item instanceof EnchantedBookItem bki) {
 				bk.set(bki);
@@ -49,6 +49,7 @@ public final class CCTab extends CreativeModeTab {
 				item.fillItemCategory(this, pItems);
 			}
 		}
-		bk.get().fillItemCategory(this, pItems);//最后才添加附魔书
+		//附魔书应该在最后
+		bk.get().fillItemCategory(this, pItems);
 	}
 }

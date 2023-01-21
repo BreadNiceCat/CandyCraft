@@ -14,16 +14,16 @@ import net.minecraftforge.fml.common.Mod;
  */
 @Mod.EventBusSubscriber(modid = CandyCraft.MODID)
 public class ForgeEventListener {
-	@SubscribeEvent
-	public static void onLivingFall(LivingFallEvent event) {
-		if (event.getEntityLiving().getItemBySlot(EquipmentSlot.FEET).is(CCItemManager.trampojelly_boots.get())) {
-			event.setCanceled(true);
-		}
-	}
+    @SubscribeEvent
+    public static void onLivingFall(LivingFallEvent event) {
+        if (event.getEntityLiving().getItemBySlot(EquipmentSlot.FEET).is(CCItemManager.trampojelly_boots.get())) {
+            event.setCanceled(true);
+        }
+    }
 
-	@SubscribeEvent
-	public static void onTick(TickEvent event) {
-		//debug时使用
-	}
+    @SubscribeEvent
+    public static void onTick(TickEvent event) {
+        //debug时使用
+    }
 
 }

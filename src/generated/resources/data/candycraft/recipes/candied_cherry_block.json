@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "candycraft:candied_cherry"
+    },
+    {
+      "item": "candycraft:candied_cherry"
+    },
+    {
+      "item": "candycraft:candied_cherry"
+    },
+    {
+      "item": "candycraft:candied_cherry"
+    },
+    {
+      "item": "candycraft:candied_cherry"
+    },
+    {
+      "item": "candycraft:candied_cherry"
+    },
+    {
+      "item": "candycraft:candied_cherry"
+    },
+    {
+      "item": "candycraft:candied_cherry"
+    },
+    {
+      "item": "candycraft:candied_cherry"
+    }
+  ],
+  "result": {
+    "item": "candycraft:candied_cherry_block"
+  }
+}

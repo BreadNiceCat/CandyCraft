@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "candycraft:waffle"
+    ]
+  },
+  "criteria": {
+    "has_waffle_nugget": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "candycraft:waffle_nugget"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "candycraft:waffle"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_waffle_nugget",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -15,14 +15,19 @@ import net.minecraftforge.eventbus.api.Cancelable;
 public class SpawnCandyLandPortalEvent extends BlockEvent {
 
 	private final NetherLikePortalShape shape;
+	private final boolean upgrade;
 
-	public SpawnCandyLandPortalEvent(LevelAccessor world, BlockPos pos, BlockState state, NetherLikePortalShape shape) {
+	public SpawnCandyLandPortalEvent(LevelAccessor world, BlockPos pos, BlockState state, NetherLikePortalShape shape, boolean upgrade) {
 		super(world, pos, state);
 		this.shape = shape;
+		this.upgrade = upgrade;
 	}
 
 	public NetherLikePortalShape getPortalShape() {
 		return shape;
 	}
 
+	public boolean isUpgrade() {
+		return upgrade;
+	}
 }

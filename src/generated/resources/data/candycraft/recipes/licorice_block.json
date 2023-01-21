@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "candycraft:licorice"
+    },
+    {
+      "item": "candycraft:licorice"
+    },
+    {
+      "item": "candycraft:licorice"
+    },
+    {
+      "item": "candycraft:licorice"
+    },
+    {
+      "item": "candycraft:licorice"
+    },
+    {
+      "item": "candycraft:licorice"
+    },
+    {
+      "item": "candycraft:licorice"
+    },
+    {
+      "item": "candycraft:licorice"
+    },
+    {
+      "item": "candycraft:licorice"
+    }
+  ],
+  "result": {
+    "item": "candycraft:licorice_block"
+  }
+}

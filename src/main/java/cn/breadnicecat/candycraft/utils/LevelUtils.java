@@ -1,6 +1,7 @@
 package cn.breadnicecat.candycraft.utils;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -22,5 +23,16 @@ public class LevelUtils {
 
 	public static void spawnItemEntity(@NotNull Level level, double posX, double posY, double posZ, ItemStack stack) {
 		level.addFreshEntity(new ItemEntity(level, posX, posY, posZ, stack));
+	}
+
+	public static BlockPos move(BlockPos pos, Direction direction, int distance) {
+		return switch (direction) {
+			case DOWN -> pos.below(distance);
+			case UP -> pos.above(distance);
+			case NORTH -> pos.north(distance);
+			case SOUTH -> pos.south(distance);
+			case WEST -> pos.west(distance);
+			case EAST -> pos.east(distance);
+		};
 	}
 }

@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "candycraft:mint"
+    },
+    {
+      "item": "candycraft:mint"
+    },
+    {
+      "item": "candycraft:mint"
+    },
+    {
+      "item": "candycraft:mint"
+    },
+    {
+      "item": "candycraft:mint"
+    },
+    {
+      "item": "candycraft:mint"
+    },
+    {
+      "item": "candycraft:mint"
+    },
+    {
+      "item": "candycraft:mint"
+    },
+    {
+      "item": "candycraft:mint"
+    }
+  ],
+  "result": {
+    "item": "candycraft:mint_block"
+  }
+}
