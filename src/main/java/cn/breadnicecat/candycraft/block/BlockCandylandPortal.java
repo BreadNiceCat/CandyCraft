@@ -2,6 +2,8 @@ package cn.breadnicecat.candycraft.block;
 
 import cn.breadnicecat.candycraft.event.SpawnCandyLandPortalEvent;
 import cn.breadnicecat.candycraft.misc.*;
+import cn.breadnicecat.candycraft.recipe.CCRecipeManager;
+import cn.breadnicecat.candycraft.recipe.CaramelPortalRecipe;
 import cn.breadnicecat.candycraft.utils.NetherLikePortalShape;
 import cn.breadnicecat.candycraft.utils.TickUnit;
 import net.minecraft.core.BlockPos;
@@ -9,6 +11,7 @@ import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.Container;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -19,6 +22,7 @@ import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -73,18 +77,22 @@ public class BlockCandylandPortal extends NetherPortalBlock {
 
     @Override
     public void entityInside(@NotNull BlockState pState, @NotNull Level level, @NotNull BlockPos pPos, @NotNull Entity entity) {
-        if (entity instanceof ItemEntity itemE) {
-            ItemStack item = itemE.getItem();
-            Vec3 delta = itemE.getDeltaMovement();
-            itemE.setItem(ItemStack.EMPTY);
-            itemE.discard();
-            if (item.is(Items.BREAD)) {//彩蛋
+        if (entity instanceof ItemEntity itemEntity) {
+            ItemStack stack = itemEntity.getItem();
+            Vec3 delta = itemEntity.getDeltaMovement();
+            itemEntity.setItem(ItemStack.EMPTY);
+            if (stack.is(Items.BREAD)) {//彩蛋
                 level.explode(null, pPos.getX(), pPos.getY(), pPos.getZ(), 2.5f, Explosion.BlockInteraction.NONE);
                 return;
             }
-            ItemEntity result = new ItemEntity(level, pPos.getX(), pPos.getY(), pPos.getZ(), item, -delta.x(), delta.y(), -delta.z());
-            //TODO 传送门配方
-            level.addFreshEntity(result);
+            for (Recipe<Container> r : level.getRecipeManager().getAllRecipesFor(CCRecipeManager.caramel_portal_type.get())) {
+                CaramelPortalRecipe r1 = (CaramelPortalRecipe) r;
+                if (r1.matches(stack, level)) {
+                    ItemStack result = r1.assemble(stack);
+                    level.addFreshEntity(new ItemEntity(level, pPos.getX(), pPos.getY(), pPos.getZ(), result, -delta.x(), delta.y(), -delta.z()));
+                    return;
+                }
+            }
         } else if (entity.isAlive() && !entity.isPassenger() && !entity.isVehicle() && entity.canChangeDimensions()) {
             ResourceKey<Level> destination = teleportDestination(pState, level, pPos);
             if (destination != null) {

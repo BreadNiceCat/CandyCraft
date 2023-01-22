@@ -2,13 +2,16 @@ package cn.breadnicecat.candycraft.misc;
 
 import cn.breadnicecat.candycraft.CandyCraft;
 import cn.breadnicecat.candycraft.data.CCDatagenManager;
+import cn.breadnicecat.candycraft.data.recipe.CaramelPortalRecipeBuilder;
 import cn.breadnicecat.candycraft.utils.CommonUtils;
+import cn.breadnicecat.candycraft.utils.ItemUtils;
 import cn.breadnicecat.candycraft.utils.Pair;
 import net.minecraft.advancements.CriterionTriggerInstance;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
@@ -132,8 +135,16 @@ public class CCRecipes {
                     shapeless(raspberry_block.block()::get, 1, () -> Ingredient.of(rope_raspberry.block().get()), 9, has_pez),
                     shapeless(mint_block.block()::get, 1, () -> Ingredient.of(mint.block().get()), 9, has_pez),
                     shapeless(cotton_candy_block.block()::get, 1, () -> Ingredient.of(cotton_candy.get()), 9, has_pez),
-                    shaped(waffle::get, 1, "##", "##", "##", "#", () -> new Ingredient[]{Ingredient.of(waffle_nugget.get())}, criterion("has_waffle_nugget", () -> hasItems(waffle_nugget.get()))));
+                    shaped(waffle::get, 1, "##", "##", "##", "#", () -> new Ingredient[]{Ingredient.of(waffle_nugget.get())}, criterion("has_waffle_nugget", () -> hasItems(waffle_nugget.get())))
+            );
 
+        }
+        //传送门
+        {
+            Collections.addAll(CCDatagenManager.recipes,
+                    caramelPortal(() -> ItemUtils.setCountByChain(chocolate_coin.get().getDefaultInstance(), 10), () -> Ingredient.of(mint.block().get()), CaramelPortalRecipeBuilder.InDimension.BOTH),
+                    caramelPortal(() -> mint_block.block().get().asItem().getDefaultInstance(), () -> Ingredient.of(mint.block().get()), CaramelPortalRecipeBuilder.InDimension.CANDYLAND)
+            );
         }
     }
 
@@ -182,6 +193,14 @@ public class CCRecipes {
     }
 
     //=====origin usages=====//
+
+    private static Consumer<Consumer<FinishedRecipe>> caramelPortal(Supplier<ItemStack> output, Supplier<Ingredient> input, CaramelPortalRecipeBuilder.InDimension dim) {
+        return (c) -> {
+            ItemStack result = output.get();
+            new CaramelPortalRecipeBuilder(result, input.get()).inDim(dim).save(c, getID(result.getItem()));
+        };
+    }
+
     private static Pair<String, Supplier<CriterionTriggerInstance>> criterion(String name, Supplier<CriterionTriggerInstance> trigger) {
         return Pair.of(name, trigger);
     }

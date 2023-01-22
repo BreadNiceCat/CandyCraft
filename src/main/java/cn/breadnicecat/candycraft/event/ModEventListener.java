@@ -2,6 +2,9 @@ package cn.breadnicecat.candycraft.event;
 
 import cn.breadnicecat.candycraft.CandyCraft;
 import cn.breadnicecat.candycraft.block.CCBlockRegisterHelper;
+import cn.breadnicecat.candycraft.gui.menu.CCMenuManager;
+import cn.breadnicecat.candycraft.gui.screen.SugarFactoryScreen;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
@@ -35,7 +38,7 @@ public class ModEventListener {
     @OnlyIn(Dist.CLIENT)
     public static void onFMLClientSetup(FMLClientSetupEvent event) {
         //setRendererLayer
-        {
+        event.enqueueWork(() -> {
             RenderType translucent = RenderType.translucent();//alpha(-[0,255]
             setRendererLayer(candyland_portal, translucent);
             setRendererLayer(trampojelly, translucent);
@@ -44,7 +47,6 @@ public class ModEventListener {
             setRendererLayer(jelly_shock_absorber, translucent);
             setRendererLayer(strawberry_ice_cream, translucent);
             setRendererLayer(grenadine_block, translucent);
-
             RenderType cutout = RenderType.cutoutMipped();//alpha=0|255
             setRendererLayer(caramel_glass_pane, cutout);
             setRendererLayer(round_caramel_glass_pane, cutout);
@@ -79,7 +81,8 @@ public class ModEventListener {
             setRendererLayer(lollipop_stem, cutout);
             setRendererLayer(lollipop_block, cutout);
             setRendererLayer(mint, cutout);
-        }
+        });
+        MenuScreens.register(CCMenuManager.sugar_factory_menu.get(), SugarFactoryScreen::new);
     }
 
     @OnlyIn(Dist.CLIENT)

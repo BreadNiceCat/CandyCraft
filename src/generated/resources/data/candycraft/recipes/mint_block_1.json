@@ -1,0 +1,11 @@
+{
+  "type": "candycraft:caramel_portal",
+  "ingredient": {
+    "item": "candycraft:mint"
+  },
+  "result": {
+    "id": "candycraft:mint_block",
+    "Count": 1
+  },
+  "dimension": "candycraft:candyland"
+}

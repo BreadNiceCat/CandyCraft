@@ -1,8 +1,8 @@
 package cn.breadnicecat.candycraft.data;
 
 import cn.breadnicecat.candycraft.CandyCraft;
+import cn.breadnicecat.candycraft.utils.ItemUtils;
 import cn.breadnicecat.candycraft.utils.LambdaUtils;
-import cn.breadnicecat.candycraft.utils.Utils;
 import net.minecraft.core.Registry;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
@@ -76,7 +76,7 @@ public final class CCBlockStateProvider extends BlockStateProvider {
     }
 
     public static boolean hasBlockItem(Block block) {
-        return !noBlockItem.contains(block) && Utils.hasBlockItem(block);
+        return !noBlockItem.contains(block) && ItemUtils.hasBlockItem(block);
     }
 
 

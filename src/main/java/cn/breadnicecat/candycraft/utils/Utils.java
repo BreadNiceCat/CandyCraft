@@ -5,9 +5,6 @@ import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 
 /**
  * mc特有,但是无法分类
@@ -37,7 +34,4 @@ public class Utils {
         return InventoryChangeTrigger.TriggerInstance.hasItems(pred);
     }
 
-    public static boolean hasBlockItem(Block block) {
-        return block.asItem() != Items.AIR || block == Blocks.AIR;//严谨(bushi
-    }
 }

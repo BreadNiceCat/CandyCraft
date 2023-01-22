@@ -1,4 +1,34 @@
 {
+  "cd-1": {
+    "sounds": [
+      {
+        "name": "candycraft:records/cd-1",
+        "stream": true
+      }
+    ]
+  },
+  "cd-5": {
+    "sounds": [
+      {
+        "name": "candycraft:records/cd-5",
+        "stream": true
+      }
+    ]
+  },
+  "cd-2": {
+    "sounds": [
+      {
+        "name": "candycraft:records/cd-2",
+        "stream": true
+      }
+    ]
+  },
+  "jelly_block": {
+    "sounds": [
+      "candycraft:blocks/jelly1",
+      "candycraft:blocks/jelly2"
+    ]
+  },
   "cd-4": {
     "sounds": [
       {
@@ -15,42 +45,12 @@
       }
     ]
   },
-  "cd-1": {
-    "sounds": [
-      {
-        "name": "candycraft:records/cd-1",
-        "stream": true
-      }
-    ]
-  },
   "jelly_step": {
     "sounds": [
       "candycraft:steps/jelly1",
       "candycraft:steps/jelly2",
       "candycraft:steps/jelly3",
       "candycraft:steps/jelly4"
-    ]
-  },
-  "cd-2": {
-    "sounds": [
-      {
-        "name": "candycraft:records/cd-2",
-        "stream": true
-      }
-    ]
-  },
-  "cd-5": {
-    "sounds": [
-      {
-        "name": "candycraft:records/cd-5",
-        "stream": true
-      }
-    ]
-  },
-  "jelly_block": {
-    "sounds": [
-      "candycraft:blocks/jelly1",
-      "candycraft:blocks/jelly2"
     ]
   }
 }

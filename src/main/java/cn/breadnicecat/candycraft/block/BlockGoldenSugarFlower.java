@@ -26,7 +26,7 @@ public class BlockGoldenSugarFlower extends BlockCandyPlant {
     @SuppressWarnings("deprecation")
     @Override
     public void entityInside(@NotNull BlockState pState, @NotNull Level pLevel, @NotNull BlockPos pPos, @NotNull Entity pEntity) {
-        if (pEntity instanceof LivingEntity livE && CommonUtils.probability(RANDOM, 100)) {
+        if (!pLevel.isClientSide() && pEntity instanceof LivingEntity livE && CommonUtils.probability(RANDOM, 100)) {
             livE.addEffect(new MobEffectInstance(MobEffects.REGENERATION, (int) TickUnit.toTick(TimeUnit.SECONDS, 5)));
         }
     }
