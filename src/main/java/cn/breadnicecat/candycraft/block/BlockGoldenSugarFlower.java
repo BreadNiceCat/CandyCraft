@@ -17,9 +17,9 @@ import java.util.concurrent.TimeUnit;
  * @author <a href="https://gitee.com/Bread_NiceCat">Bread_NiceCat</a>
  * @date 2023/1/21 20:56
  */
-public class GoldenSugarFlower extends BlockCandyPlant {
+public class BlockGoldenSugarFlower extends BlockCandyPlant {
 
-    public GoldenSugarFlower(Properties pProperties) {
+    public BlockGoldenSugarFlower(Properties pProperties) {
         super(pProperties);
     }
 

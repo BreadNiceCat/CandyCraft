@@ -168,7 +168,7 @@ public class CCBlockManager {
     public static final BlockRegistryObject<BlockCandyWaterPlant> rope_raspberry = simpleCandyWaterPlant("rope_raspberry").model(CROP_GENERATOR).loot((b, l) -> l.tableSilkTouchOrShearsDispatch(b, EmptyLootItem.emptyItem())).build();
     public static final BlockRegistryObject<BlockCandyWaterPlant> banana_seaweed = simpleCandyWaterPlant("banana_seaweed").model(CROSS_GENERATOR).loot((b, l) -> l.tableSilkTouchOrShearsDispatch(b, EmptyLootItem.emptyItem())).build();
     public static final BlockRegistryObject<BlockCandyPlant> fraise_tagada_flower = simpleCandyPlant("fraise_tagada_flower").model(CROSS_GENERATOR).build();
-    public static final BlockRegistryObject<GoldenSugarFlower> golden_sugar_flower = newSugaryBuilder("golden_sugar_flower", () -> new GoldenSugarFlower(newBlockProp(Material.PLANT).instabreak().noCollission().sound(SoundType.GRASS))).model(CROSS_GENERATOR).build();
+    public static final BlockRegistryObject<BlockGoldenSugarFlower> golden_sugar_flower = newSugaryBuilder("golden_sugar_flower", () -> new BlockGoldenSugarFlower(newBlockProp(Material.PLANT).instabreak().noCollission().sound(SoundType.GRASS))).model(CROSS_GENERATOR).build();
     public static final BlockRegistryObject<BlockAcidMintFlower> acid_mint_flower = newSugaryBuilder("acid_mint_flower", () -> new BlockAcidMintFlower(newBlockProp(Material.PLANT).instabreak().noCollission().sound(SoundType.GRASS))).model(CROSS_GENERATOR).build();
     //crop
     public static final BlockRegistryObject<BlockCandyCrop> dragibus_crops = newSugaryBuilder("dragibus_crops", () -> new BlockCandyCrop(newBlockProp(Material.PLANT).noCollission().instabreak().sound(SoundType.CROP), dragibus::get)).noBlockItem().model(((p, n, b) -> {
@@ -224,6 +224,8 @@ public class CCBlockManager {
     static {
         CandyCraft.clockIn();
         CCDatagenManager.langEn.put("container.candycraft.crafting", "Marshmallow Crafting");
+        CCDatagenManager.langEn.put("container.candycraft.sugar_factory", "Sugar Factory");
+        CCDatagenManager.langEn.put("container.candycraft.advanced_sugar_factory", "Advanced Sugar Factory");
     }
 
     public static BlockBehaviour.Properties newBlockProp() {

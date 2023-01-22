@@ -15,18 +15,18 @@ import org.jetbrains.annotations.Nullable;
  */
 
 public class BlockLicoriceFurnace extends AbstractFurnaceBlock {
-	public BlockLicoriceFurnace(Properties properties) {
-		super(properties);
-	}
+    public BlockLicoriceFurnace(Properties properties) {
+        super(properties);
+    }
 
-	@Nullable
-	@Override
-	public BlockEntity newBlockEntity(@NotNull BlockPos pPos, @NotNull BlockState pState) {
-		return null;
-	}
+    @Override
+    protected void openContainer(@NotNull Level pLevel, @NotNull BlockPos pPos, @NotNull Player pPlayer) {
 
-	@Override
-	protected void openContainer(@NotNull Level pLevel, @NotNull BlockPos pPos, @NotNull Player pPlayer) {
+    }
 
-	}
+    @Nullable
+    @Override
+    public BlockEntity newBlockEntity(@NotNull BlockPos pPos, @NotNull BlockState pState) {
+        return null;
+    }
 }

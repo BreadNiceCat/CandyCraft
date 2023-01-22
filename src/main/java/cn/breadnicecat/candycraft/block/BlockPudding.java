@@ -11,15 +11,15 @@ import net.minecraft.world.level.block.state.properties.BooleanProperty;
  * @date 2023/1/11 13:27
  */
 public class BlockPudding extends Block {
-	public static final BooleanProperty IS_ICE_FLAVOR = BooleanProperty.create("ice_flavor");
+    public static final BooleanProperty IS_ICE_FLAVOR = BooleanProperty.create("ice_flavor");
 
-	public BlockPudding(BlockBehaviour.Properties pProperties) {
-		super(pProperties);
-		registerDefaultState(defaultBlockState().setValue(IS_ICE_FLAVOR, false));
-	}
+    public BlockPudding(BlockBehaviour.Properties pProperties) {
+        super(pProperties);
+        registerDefaultState(this.stateDefinition.any().setValue(IS_ICE_FLAVOR, false));
+    }
 
-	@Override
-	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
-		pBuilder.add(IS_ICE_FLAVOR);
-	}
+    @Override
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
+        pBuilder.add(IS_ICE_FLAVOR);
+    }
 }
