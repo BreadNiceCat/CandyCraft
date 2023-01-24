@@ -1,17 +1,11 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "###",
-    "###",
-    "   "
-  ],
-  "key": {
-    "#": {
-      "item": "candycraft:caramel_glass"
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "candycraft:diamond_caramel_glass_pane"
     }
-  },
+  ],
   "result": {
-    "item": "candycraft:caramel_glass_pane",
-    "count": 16
+    "item": "candycraft:caramel_glass_pane"
   }
 }

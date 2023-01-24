@@ -1,6 +1,5 @@
 package cn.breadnicecat.candycraft.misc;
 
-import cn.breadnicecat.candycraft.data.CCDatagenManager;
 import cn.breadnicecat.candycraft.item.CCItemManager;
 import cn.breadnicecat.candycraft.utils.UndimodifiableObject;
 import net.minecraft.core.NonNullList;
@@ -20,24 +19,23 @@ import java.util.HashSet;
  * @date 2022/12/22 16:31
  */
 public final class CCTab extends CreativeModeTab {
-
+	
 	private HashSet<EnchantmentCategory> enchantmentCategories = new HashSet<>();
-
+	
 	public CCTab() {
 		super("candycrafttab");
-		CCDatagenManager.langEn.put("itemGroup.candycrafttab", "CandyCraft");
 	}
-
+	
 	@Override
 	public @NotNull ItemStack makeIcon() {
 		return CCItemManager.pez.get().getDefaultInstance();
 	}
-
+	
 	public @NotNull CreativeModeTab addEnchantmentCategories(@NotNull EnchantmentCategory... pEnchantmentCategories) {
 		Collections.addAll(enchantmentCategories, pEnchantmentCategories);
 		return super.setEnchantmentCategories(enchantmentCategories.toArray(new EnchantmentCategory[0]));
 	}
-
+	
 	@SuppressWarnings("deprecation")
 	@Override
 	public void fillItemList(@NotNull NonNullList<ItemStack> pItems) {

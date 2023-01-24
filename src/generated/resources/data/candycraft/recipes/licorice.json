@@ -1,0 +1,10 @@
+{
+  "type": "candycraft:licorice_furnace",
+  "ingredient": {
+    "item": "candycraft:licorice_ore"
+  },
+  "result": {
+    "id": "candycraft:licorice",
+    "Count": 1
+  }
+}

@@ -32,4 +32,13 @@ public class ItemUtils {
         stack.setCount(count);
         return stack;
     }
+
+    public static boolean equalsExceptCount(ItemStack a, ItemStack b) {
+        a = a.copy();
+        b = b.copy();
+        if (!a.sameItem(b)) {
+            return false;
+        }
+        return a.getOrCreateTag().equals(b.getOrCreateTag());
+    }
 }

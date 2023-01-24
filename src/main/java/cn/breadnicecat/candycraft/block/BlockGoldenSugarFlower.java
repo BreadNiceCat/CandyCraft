@@ -18,16 +18,16 @@ import java.util.concurrent.TimeUnit;
  * @date 2023/1/21 20:56
  */
 public class BlockGoldenSugarFlower extends BlockCandyPlant {
-
-    public BlockGoldenSugarFlower(Properties pProperties) {
-        super(pProperties);
-    }
-
-    @SuppressWarnings("deprecation")
-    @Override
-    public void entityInside(@NotNull BlockState pState, @NotNull Level pLevel, @NotNull BlockPos pPos, @NotNull Entity pEntity) {
-        if (!pLevel.isClientSide() && pEntity instanceof LivingEntity livE && CommonUtils.probability(RANDOM, 100)) {
-            livE.addEffect(new MobEffectInstance(MobEffects.REGENERATION, (int) TickUnit.toTick(TimeUnit.SECONDS, 5)));
-        }
-    }
+	
+	public BlockGoldenSugarFlower(Properties pProperties) {
+		super(pProperties);
+	}
+	
+	@SuppressWarnings("deprecation")
+	@Override
+	public void entityInside(@NotNull BlockState pState, @NotNull Level pLevel, @NotNull BlockPos pPos, @NotNull Entity pEntity) {
+		if (!pLevel.isClientSide() && pEntity instanceof LivingEntity livE && CommonUtils.probability(RANDOM, 150)) {
+			livE.addEffect(new MobEffectInstance(MobEffects.REGENERATION, (int) TickUnit.toTick(TimeUnit.SECONDS, 5)));
+		}
+	}
 }

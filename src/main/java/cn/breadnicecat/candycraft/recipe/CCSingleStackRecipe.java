@@ -12,17 +12,16 @@ import java.util.List;
  * @date 2023/1/22 15:29
  */
 public abstract class CCSingleStackRecipe extends CCRecipeMedium {
-    protected CCSingleStackRecipe(ResourceLocation id) {
+    public CCSingleStackRecipe(ResourceLocation id) {
         super(id);
     }
 
     /**
      * @param itemIn 只取第一个
      */
-    @Deprecated
     @Override
-    public @NotNull
-    final ItemStack assemble(List<ItemStack> itemIn) {
+    @Deprecated
+    public final @NotNull ItemStack assemble(List<ItemStack> itemIn) {
         return assemble(itemIn.get(0));
     }
 

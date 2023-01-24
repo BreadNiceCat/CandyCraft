@@ -5,7 +5,7 @@ issueTrackerURL = "https://gitee.com/Bread_NiceCat/candycraft/issues"
 [[mods]]
 modId = "candycraft"
 version = "${file.jarVersion}"
-displayName = "CandyCraft"
+displayName = "CandyCraft Unoffical"
 #updateJSONURL = "https://gitee.com/Bread_NiceCat/candycraft/raw/master/update.json"
 logoFile = "logo.png"
 authors = "Bread_NiceCat, Star_Ocean_Sama"

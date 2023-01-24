@@ -21,7 +21,7 @@ public class SugarFactoryRecipe extends CCSingleStackRecipe {
     private final ItemStack result;
     private final boolean advanced;
 
-    protected SugarFactoryRecipe(Ingredient ingredient, ItemStack result, boolean advanced, ResourceLocation id) {
+    public SugarFactoryRecipe(Ingredient ingredient, ItemStack result, boolean advanced, ResourceLocation id) {
         super(id);
         this.ingredient = ingredient;
         this.result = result;
@@ -30,7 +30,7 @@ public class SugarFactoryRecipe extends CCSingleStackRecipe {
 
     @Override
     public @NotNull ItemStack getResultItem() {
-        return result;
+        return result.copy();
     }
 
     @Override
@@ -55,10 +55,10 @@ public class SugarFactoryRecipe extends CCSingleStackRecipe {
     @Override
     @Deprecated
     public boolean matches(ItemStack itemIn, Level level) {
-        return false;
+        return matches(itemIn, false);
     }
 
-    public boolean matches(ItemStack itemIn, boolean isAdvanced, Level level) {
+    public boolean matches(ItemStack itemIn, boolean isAdvanced) {
         return (isAdvanced || !advanced) && ingredient.test(itemIn);
     }
 

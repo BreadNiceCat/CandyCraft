@@ -1,0 +1,11 @@
+{
+  "type": "candycraft:sugar_factory",
+  "ingredient": {
+    "item": "candycraft:honeycomb_block"
+  },
+  "result": {
+    "id": "candycraft:honeycomb",
+    "Count": 1
+  },
+  "advanced": false
+}

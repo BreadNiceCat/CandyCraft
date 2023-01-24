@@ -7,12 +7,12 @@ import java.util.concurrent.TimeUnit;
  * @date 2023/1/19 21:02
  */
 public class TickUnit {
-    public static long toTick(TimeUnit unit, long duration) {
-        return unit.toMillis(duration) / 50;
-    }
-
-    public static long fromTick(TimeUnit unit, long tick) {
-        return TimeUnit.MILLISECONDS.convert(tick * 50, unit);
-    }
-    
+	public static long toTick(TimeUnit unit, long duration) {
+		return unit.toMillis(duration) / 50;
+	}
+	
+	public static long fromTick(TimeUnit unit, long tick) {
+		return TimeUnit.MILLISECONDS.convert(tick * 50, unit);
+	}
+	
 }

@@ -46,14 +46,12 @@ public class CaramelPortalRecipe extends CCSingleStackRecipe {
     public @NotNull RecipeType<?> getType() {
         return CCRecipeManager.caramel_portal_type.get();
     }
-
+    
     /**
      * @apiNote 不会处理itemIn
      */
-    @Override
     public ItemStack assemble(ItemStack itemIn) {
-        int i = itemIn.getCount();
-        return ItemUtils.setCountByChain(output.copy(), output.getCount() * i);
+        return ItemUtils.setCountByChain(output.copy(), output.getCount() * itemIn.getCount());
     }
 
     public boolean matches(ItemStack item, Level level) {

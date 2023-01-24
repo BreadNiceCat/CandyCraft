@@ -1,11 +1,35 @@
 {
-  "type": "candycraft:caramel_portal",
-  "ingredient": {
-    "item": "candycraft:mint"
-  },
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "candycraft:mint"
+    },
+    {
+      "item": "candycraft:mint"
+    },
+    {
+      "item": "candycraft:mint"
+    },
+    {
+      "item": "candycraft:mint"
+    },
+    {
+      "item": "candycraft:mint"
+    },
+    {
+      "item": "candycraft:mint"
+    },
+    {
+      "item": "candycraft:mint"
+    },
+    {
+      "item": "candycraft:mint"
+    },
+    {
+      "item": "candycraft:mint"
+    }
+  ],
   "result": {
-    "id": "candycraft:mint_block",
-    "Count": 1
-  },
-  "dimension": "candycraft:candyland"
+    "item": "candycraft:mint_block"
+  }
 }

@@ -16,7 +16,7 @@ import java.util.List;
  */
 public abstract class CCRecipeMedium extends CCRecipeBase<Container> {
 
-    protected CCRecipeMedium(ResourceLocation id) {
+    public CCRecipeMedium(ResourceLocation id) {
         super(id);
     }
 
@@ -32,21 +32,6 @@ public abstract class CCRecipeMedium extends CCRecipeBase<Container> {
         return ItemStack.EMPTY;
     }
 
-    @Override
-    @Deprecated
-    public final boolean canCraftInDimensions(int pWidth, int pHeight) {
-        return false;
-    }
-
-    @Override
-    public boolean isSpecial() {
-        return true;
-    }
-
-    @Override
-    public @NotNull ItemStack getToastSymbol() {
-        return ItemStack.EMPTY;
-    }
 
     /**
      * 合成返回的结果
